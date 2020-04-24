@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title> Data Lovers </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo"> PokeFã </h1>
+    <nav class="nav">
+      <ul>
+        <li class="item"><a href="index.html"> Página Inicial </a></li>
+        <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
+        <li class="item"><a href="calculadora.html"> Calculadora </a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h3 class="filtrar"> Filtrar por: </h3>
+    <section class="filtros">
+      <legend> Tipo </legend>
+      <select>
+        <option class="option"> Fogo </option>
+        <option class="option"> Água </option>
+        <option class="option"> Planta </option>
+        <option class="option"> Elétrico </option>
+        <option class="option"> Normal </option>
+        <option class="option"> Gelo </option>
+        <option class="option"> Veneno </option>
+        <option class="option"> Lutador </option>
+        <option class="option"> Terra </option>
+        <option class="option"> Pedra </option>
+        <option class="option"> Psíquico </option>
+        <option class="option"> Inseto </option>
+        <option class="option"> Dragão </option>
+        <option class="option"> Fada </option>
+        <option class="option"> Fantasma </option>
+        <option class="option"> Noturno </option>
+      </select>
+    </section>
+
+    <section class="filtros">
+      <legend> Ovos </legend>
+      <select>
+        <option class="option"> 2 km </option>
+        <option class="option"> 5 km </option>
+        <option class="option"> 7 km </option>
+        <option class="option"> 10 km </option>
+      </select>
+    </section>
+
+    <section class="filtros">
+      <legend> Ordenar por: </legend>
+      <select>
+        <option class="option"> Alfabética A-Z</option>
+        <option class="option"> Alfabética Z-A</option>
+        <option class="option"> Numérica Crescente</option>
+        <option class="option"> Numérica Decrescente</option>
+      </select>
+    </section>
+    <section class="filtros">
+      <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar">
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
