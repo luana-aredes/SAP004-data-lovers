@@ -36,3 +36,14 @@
 .filtrar {
   padding: 100px 0 0 15px;
 }
+
+#pokemonList .card {
+  background-color: rgb(167, 163, 163);
+  border: 1px #000000 solid;
+  width: 160px;
+  height: 250px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
