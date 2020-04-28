@@ -1,31 +1,41 @@
+body {
+  background-image: url(fundo_paisagem.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .titulo {
   text-align: center;
+  font-size: 100px;
+  margin: 30px;
 }
 
 .nav {
   position: absolute;
   top: auto;
-  right: 0;
+  right: 20px;
+  margin-top: 20px;
+
 }
 
 .item {
   display: inline;
   margin: 0 0 0 15px;
   border-radius: 5px;
-  border: red 2px solid;
   padding: 5px;
 }
 
 .item a {
   text-transform: uppercase;
-  color: black;
+  color: rgb(17, 24, 87);
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
 }
 
 .item a:hover {
-  color: red;
+  color: rgb(30, 40, 131);
 }
 
 .filtros {
@@ -33,8 +43,22 @@
   padding: 10px 0 0 15px;
 }
 
+.option {
+  color: rgb(17, 24, 87);
+  font-weight: bold;
+}
+
 .filtrar {
-  padding: 100px 0 0 15px;
+  padding: 150px 0 0 15px;
+  color: rgb(17, 24, 87);
+  font-size: 22px;
+}
+
+.legend {
+  color: rgb(17, 24, 87);
+  font-weight: bold;
+  font-size: 18px;
+  ;
 }
 
 .card-container {
@@ -69,11 +93,29 @@
 }
 
 .front {
-  background-color: steelblue;
+  background-color: rgba(223, 221, 221, 0.4);
+
 }
 
 .back {
-  background-color: violet;
+  background-color: rgba(223, 221, 221, 0.4);
+
   /*Primeiro vamos girar back a 180 graus. Como ele inicialmente estará de costas para nós, vamos rotacioná-lo.*/
   transform: rotateY(180deg);
+}
+
+#pokemonList .card-container {
+  width: 160px;
+  height: 250px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+footer {
+  background-image: linear-gradient(to right, #639d25, #427768);
+  height: 100px;
+  color: beige;
+  text-align: center;
+  padding-top: 100px;
 }

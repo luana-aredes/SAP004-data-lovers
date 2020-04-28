@@ -6,6 +6,7 @@ sortData(data, sortBy, sortOrder): esta função recebe três parâmetros. O pri
 
 computeStats(data): essa função nos permite fazer cálculos estatísticos básicos para serem exibidos de acordo com o que os dados permitem.*/
 
+
 export const example = () => {
   return 'example';
 };

@@ -21,7 +21,7 @@
   <main>
     <h3 class="filtrar"> Filtrar por: </h3>
     <section class="filtros">
-      <legend> Tipo </legend>
+      <legend class="legend"> Tipo </legend>
       <select>
         <option class="option"> Fogo </option>
         <option class="option"> Água </option>
@@ -43,7 +43,7 @@
     </section>
 
     <section class="filtros">
-      <legend> Ovos </legend>
+      <legend class="legend"> Ovos </legend>
       <select>
         <option class="option"> 2 km </option>
         <option class="option"> 5 km </option>
@@ -53,7 +53,7 @@
     </section>
 
     <section class="filtros">
-      <legend> Ordenar por: </legend>
+      <legend class="legend"> Ordenar por: </legend>
       <select>
         <option class="option"> Alfabética A-Z</option>
         <option class="option"> Alfabética Z-A</option>
@@ -61,27 +61,18 @@
         <option class="option"> Numérica Decrescente</option>
       </select>
     </section>
-    <section class="filtros">
-      <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar">
-    </section>
 
-    <div class="card-container">
-      <div class="card">
-        <div class="front">
-          <p> Essa é a frente </p>
-        </div>
-        <div class="back">
-          <p> Esse é o verso </p>
-        </div>
-      </div>
-    </div>
+    <section id="pokemonList">
+
+    </section>
   </main>
   <footer>
-
+    Copyright Lab- meninas
   </footer>
 
   <div id="root"></div>
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
