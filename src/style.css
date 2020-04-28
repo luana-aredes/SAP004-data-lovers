@@ -119,3 +119,14 @@ footer {
   text-align: center;
   padding-top: 100px;
 }
+
+#pokemonList .card {
+  background-color: rgb(167, 163, 163);
+  border: 1px #000000 solid;
+  width: 160px;
+  height: 250px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
