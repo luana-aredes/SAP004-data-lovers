@@ -8,8 +8,14 @@ import data from './data/pokemon/pokemon.js';
 let cards = ""
 
 const pokemons = data.pokemon
-
+let types = []
 for (const pokemon of pokemons) {
+  for(const type of pokemon.type){
+    types.push(type)
+  }
+}
+for (const pokemon of pokemons) {
+     
   cards += '<div class="card-container">'
   cards += '<div class="card">'
   cards += '<div class="front">'
@@ -27,7 +33,15 @@ for (const pokemon of pokemons) {
   cards += '</div>'
   cards += '</div>'
 }
+types = [...new Set(types)];
+let typesHtml = '<option class="option"></option>'
+for(const type of types){
+  typesHtml += '<option class="option" value="'+type+'">' + type + '</option>'
+}
 
+document.getElementById("types").innerHTML = typesHtml
+
+console.log(types)
 
 
 
