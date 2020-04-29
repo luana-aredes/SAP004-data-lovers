@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title> Data Lovers </title>
   <link rel="stylesheet" href="style.css" />
@@ -23,29 +24,15 @@
     <h3 class="filtrar"> Filtrar por: </h3>
     <section class="filtros">
       <legend class="legend"> Tipo </legend>
-      <select>
-        <option class="option"> Fogo </option>
-        <option class="option"> Água </option>
-        <option class="option"> Planta </option>
-        <option class="option"> Elétrico </option>
-        <option class="option"> Normal </option>
-        <option class="option"> Gelo </option>
-        <option class="option"> Veneno </option>
-        <option class="option"> Lutador </option>
-        <option class="option"> Terra </option>
-        <option class="option"> Pedra </option>
-        <option class="option"> Psíquico </option>
-        <option class="option"> Inseto </option>
-        <option class="option"> Dragão </option>
-        <option class="option"> Fada </option>
-        <option class="option"> Fantasma </option>
-        <option class="option"> Noturno </option>
+      <select id="types">
+                     
       </select>
     </section>
 
     <section class="filtros">
       <legend class="legend"> Ovos </legend>
       <select>
+        <option class="option"></option>
         <option class="option"> 2 km </option>
         <option class="option"> 5 km </option>
         <option class="option"> 7 km </option>
@@ -58,7 +45,7 @@
       <select>
         <option class="option"> Alfabética A-Z</option>
         <option class="option"> Alfabética Z-A</option>
-        <option class="option"> Numérica Crescente</option>
+        <option class="option" selected>Numérica Crescente</option>
         <option class="option"> Numérica Decrescente</option>
       </select>
     </section>
