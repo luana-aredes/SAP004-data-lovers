@@ -9,7 +9,14 @@ body {
   text-align: center;
   font-size: 100px;
   margin: 30px;
+      
 }
+
+@font-face {
+  font-family: Pokemon;
+  src: url(pokemon.ttf)
+}
+
 
 .nav {
   position: absolute;
@@ -24,6 +31,7 @@ body {
   margin: 0 0 0 15px;
   border-radius: 5px;
   padding: 5px;
+  
 }
 
 .item a {
