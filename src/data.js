@@ -6,6 +6,33 @@ sortData(data, sortBy, sortOrder): esta função recebe três parâmetros. O pri
 
 computeStats(data): essa função nos permite fazer cálculos estatísticos básicos para serem exibidos de acordo com o que os dados permitem.*/
 
+/*export const filtro = {
+  filterData(tipo, condição) {
+
+  }
+}
+
+
+let km22 = pokemons.filter((poke) => {
+  return poke.egg === "2 km";
+});
+
+let km5 = pokemons.filter((poke) => {
+  return poke.egg === "5 km";
+});
+
+let km7 = pokemons.filter((poke) => {
+  return poke.egg === "7 km";
+});
+
+let km5 = pokemons.filter((poke) => {
+  return poke.egg === "10 km";
+});
+*/
+
+
+
+
 
 export const example = () => {
   return 'example';
