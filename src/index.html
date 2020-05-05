@@ -4,42 +4,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title> Data Lovers </title>
+  <title> Pokefã </title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
-    <h1 class="titulo"> PokeFã </h1>
-    <nav class="nav">
-      <ul>
-        <li class="item"><a href="index.html"> Página Inicial </a></li>
-        <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
-        <li class="item"><a href="calculadora.html"> Calculadora </a></li>
-      </ul>
-    </nav>
+    <div class="titulo">
+      <h1 class="titulo"> PokeFÃ </h1>
+      <div class="titulo">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li class="item"><a href="index.html"> Página Inicial </a></li>
+          <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
+          <li class="item"><a href="calculadora.html"> Calculadora </a></li>
+        </ul>
+      </nav>
   </header>
   <main>
     <h3 class="filtrar"> Filtrar por: </h3>
     <section class="filtros">
       <legend class="legend"> Tipo </legend>
       <select id="types">
-                     
       </select>
     </section>
-
     <section class="filtros">
       <legend class="legend"> Ovos </legend>
-      <select>
-        <option class="option"></option>
-        <option class="option"> 2 km </option>
-        <option class="option"> 5 km </option>
-        <option class="option"> 7 km </option>
-        <option class="option"> 10 km </option>
+      <select id="eggs">
       </select>
     </section>
-
     <section class="filtros">
       <legend class="legend"> Ordenar por: </legend>
       <select>
@@ -49,11 +43,14 @@
         <option class="option"> Numérica Decrescente</option>
       </select>
     </section>
-    <section class="filtros">
-      <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar">
-    </section>
+    <form action="" method=submit class="pesquisa">
+      <input type="search" id="pesquisar" placeholder="Pesquisar" list="data.pokemonList">
+      <input type="image" src="imagens/lupa.png" class="btn" button="executar()">
+      <datalist id="historico">
+        <option value="pikachu"></option>
+      </datalist>
+    </form>
     <section id="pokemonList">
-
     </section>
   </main>
   <footer>
@@ -62,7 +59,6 @@
 
   <div id="root"></div>
   <script src="main.js" type="module"></script>
-
 </body>
 
 </html>
