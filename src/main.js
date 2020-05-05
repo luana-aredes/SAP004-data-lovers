@@ -1,5 +1,5 @@
 import {
-  example
+  sortData
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -54,3 +54,13 @@ for (const pokemon of pokemons) {
 }
 
 document.getElementById("pokemonList").innerHTML = cards
+
+document.getElementById("ordens").addEventListener('change', (event) => {
+
+  const ordem = event.target.value.split("|");
+  const sortBy = ordem[0];
+  const sortOrder = ordem[1]
+  const resultado = sortData(pokemons, sortBy, sortOrder);
+  console.log("resultado" , resultado);
+})
+
