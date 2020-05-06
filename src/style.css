@@ -9,6 +9,7 @@ body {
   text-align: center;
   font-size: 10vw;
   margin: 30px;
+<<<<<<< HEAD
   font-family: pokemon;
   color: #ffcb08;
   -webkit-text-stroke-width: 2px;
@@ -20,13 +21,28 @@ body {
 @font-face {
   font-family: pokemon;
   src: url(font/pokemon.ttf)
+=======
+      
+>>>>>>> ce92d938631e4b1adadc9b8689feb83b9fc14ee4
 }
+
+@font-face {
+  font-family: Pokemon;
+  src: url(pokemon.ttf)
+}
+
 
 .nav {
   position: absolute;
+<<<<<<< HEAD
   top: 5%;
   right: 10%;
   /* margin-top: 10%; */
+=======
+  top: auto;
+  right: 20px;
+  margin-top: 20px;
+>>>>>>> ce92d938631e4b1adadc9b8689feb83b9fc14ee4
   width: 940px;
   text-align: right;
 }
@@ -36,6 +52,7 @@ body {
   margin: 0 0 0 15px;
   border-radius: 5px;
   padding: 5px;
+  
 }
 
 .item a {
@@ -135,6 +152,10 @@ body {
   background-color: rgba(223, 221, 221, 0.5);
   box-shadow: 4px 4px rgb(41, 117, 26, 0.4);
   border-radius: 10px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce92d938631e4b1adadc9b8689feb83b9fc14ee4
   /*Primeiro vamos girar back a 180 graus. Como ele inicialmente estará de costas para nós, vamos rotacioná-lo.*/
   transform: rotateY(180deg);
   text-align: left;
@@ -166,8 +187,16 @@ footer {
 }
 
 @media screen and (max-width: 490px) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce92d938631e4b1adadc9b8689feb83b9fc14ee4
   .nav {
     width: auto;
     position: static;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ce92d938631e4b1adadc9b8689feb83b9fc14ee4

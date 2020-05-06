@@ -1,4 +1,7 @@
-import { example, anotherExample } from '../src/data.js';
+import {
+  example,
+  anotherExample
+} from '../src/data.js';
 
 
 describe('example', () => {
@@ -21,3 +24,9 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+
+/*test('object assignment', () => {
+  const data = {one: 1};
+  data['two'] = 2;
+  expect(data).toEqual({one: 1, two: 2});
+}); */
