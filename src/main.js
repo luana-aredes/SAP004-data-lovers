@@ -7,7 +7,6 @@ import {
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
-let cards = ""
 let types = []
 let eggs = new Set();
 
@@ -34,31 +33,34 @@ document.getElementById("types").innerHTML = typesHtml
 
 document.getElementById("eggs").innerHTML = eggsHtml
 
-for (const pokemon of pokemons) {
-  cards += '<div class="card-container">'
-  cards += '<div class="card">'
-  cards += '<div class="front">'
-  cards += '  <div><img src="' + pokemon.img + '" alt="' + pokemon.name + '"></div>'
-  cards += '  <div class="numero">' + pokemon.num + '</div>'
-  cards += '  <div class="nome">' + pokemon.name + '</div>'
-  cards += '  <div class="tipo"> Tipo: ' + pokemon.type + '</div>'
-  cards += '  <div class="ovos"> ' + pokemon.egg + '</div>'
-  cards += '</div>'
-  cards += '<div class="back">'
-  //cards += '  <div class="imagem"><img src="' + pokemon.img + '" alt="' + pokemon.name + '"></div>'
-  cards += '  <div class="altura"> Altura ' + pokemon.height + '</div>'
-  cards += '  <div class="largura"> Largura: ' + pokemon.weight + '</div>'
-  cards += '  <div class="qauntidade-doce"> Doces: ' + pokemon.candy_count + '</div>'
-  cards += '  <div class="chance-aparecer"> Chance de Aparecer: ' + pokemon.spawn_chance + '</div>'
-  cards += '  <div class="tempo-desova"> Tempo de Desova: ' + pokemon.spawn_time + '</div>'
-  cards += '  <div class="fraquezas"> Fraquezas: ' + pokemon.weaknesses + '</div>'
-  cards += '</div>'
-  cards += '</div>'
-  cards += '</div>'
+function mostrarNaTela(pokemonArray) {
+  let cards = ""
+  for (const pokemon of pokemonArray) {
+    cards += '<div class="card-container">'
+    cards += '<div class="card">'
+    cards += '<div class="front">'
+    cards += '  <div><img src="' + pokemon.img + '" alt="' + pokemon.name + '"></div>'
+    cards += '  <div class="numero">' + pokemon.num + '</div>'
+    cards += '  <div class="nome">' + pokemon.name + '</div>'
+    cards += '  <div class="tipo"> Tipo:' + pokemon.type + '</div>'
+    cards += '  <div class="ovos"> Ovos:' + pokemon.egg + '</div>'
+    cards += '</div>'
+    cards += '<div class="back">'
+    //cards += '  <div class="imagem"><img src="' + pokemon.img + '" alt="' + pokemon.name + '"></div>'
+    cards += '  <div class="altura"> Altura ' + pokemon.height + '</div>'
+    cards += '  <div class="largura"> Largura: ' + pokemon.weight + '</div>'
+    cards += '  <div class="qauntidade-doce"> Doces: ' + pokemon.candy_count + '</div>'
+    cards += '  <div class="chance-aparecer"> Chance de Aparecer: ' + pokemon.spawn_chance + '</div>'
+    cards += '  <div class="tempo-desova"> Tempo de Desova: ' + pokemon.spawn_time + '</div>'
+    cards += '  <div class="fraquezas"> Fraquezas: ' + pokemon.weaknesses + '</div>'
+    cards += '</div>'
+    cards += '</div>'
+    cards += '</div>'
+  }
+  return document.getElementById("pokemonList").innerHTML = cards
 }
 
-document.getElementById("pokemonList").innerHTML = cards
-
+mostrarNaTela(pokemons)
 
 let pokemonType = document.getElementById("types");
 pokemonType.addEventListener("click", seletorDeTipo)
@@ -69,13 +71,12 @@ function seletorDeTipo() {
   const tipoDePokemon2 = pokemonType.options;
   const typeSelecionado = tipoDePokemon2[tipoDePokemon1].text;
   const resultType = filtro.filterByType(pokemons, typeSelecionado);
-
   console.log(resultType)
 }
 
 let pokemonEgg = document.getElementById("eggs");
 pokemonEgg.addEventListener("click", seletorDeEgg)
-console.log(pokemonEgg)
+console.log("oii" + pokemonEgg)
 
 function seletorDeEgg() {
   const tipoDePokemon3 = pokemonEgg.selectedIndex;
@@ -84,11 +85,14 @@ function seletorDeEgg() {
   const resultEgg = filtro.filterByEgg(pokemons, typeSelecionado);
   console.log(resultEgg)
 }
+
 document.getElementById("ordens").addEventListener('change', (event) => {
 
   const ordem = event.target.value.split("|");
   const sortBy = ordem[0];
   const sortOrder = ordem[1]
   const resultado = sortData(pokemons, sortBy, sortOrder);
-  console.log("resultado", resultado);
+
+  mostrarNaTela(resultado)
+
 })

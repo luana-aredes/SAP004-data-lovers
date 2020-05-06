@@ -65,7 +65,7 @@ body {
   height: 40px;
 }
 
-#pesquisar {
+/*#pesquisar {
   width: 200px;
   height: 20px;
   float: left;
@@ -85,7 +85,7 @@ body {
 
 #pesquisar:focus {
   border: solid 2px rgb(84, 106, 127);
-}
+} */
 
 .legend {
   color: rgb(17, 24, 87);

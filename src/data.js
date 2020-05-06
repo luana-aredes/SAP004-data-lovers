@@ -11,13 +11,21 @@ export const filtro = {
   }
 };
 
-
 export const sortData = (data, sortBy, sortOrder) => {
-  /*data[].sort()
-  if === desc  .reverse()*/
-  return data;
-};
+  data.sort(function (a, b) {
+    if (a[sortBy] > b[sortBy]) {
+      return 1;
+    }
+    if (a[sortBy] < b[sortBy]) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+  if (sortOrder === "desc") {
+    data.reverse()
+  }
+
+  return data
+}
