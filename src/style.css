@@ -9,13 +9,6 @@ body {
   text-align: center;
   font-size: 10vw;
   margin: 30px;
-  <<<<<<< HEAD=======font-family: pokemon;
-  color: #ffcb08;
-  -webkit-text-stroke-width: 2px;
-  /* largura da borda */
-  -webkit-text-stroke-color: #385fab;
-  /* cor da borda */
-  >>>>>>>f75a40797a42e1d350508fc39878de09453b7405
 }
 
 @font-face {

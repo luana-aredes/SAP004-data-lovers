@@ -1,10 +1,8 @@
 import {
-  <<
-  << << < HEAD
-  filtro ===
-  === =
-  sortData >>>
-  >>> > f75a40797a42e1d350508fc39878de09453b7405
+  filtro
+} from './data.js';
+import {
+  sortData
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
