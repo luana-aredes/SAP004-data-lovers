@@ -1,5 +1,10 @@
 import {
-  filtro
+  <<
+  << << < HEAD
+  filtro ===
+  === =
+  sortData >>>
+  >>> > f75a40797a42e1d350508fc39878de09453b7405
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -81,3 +86,11 @@ function seletorDeEgg() {
   const resultEgg = filtro.filterByEgg(pokemons, typeSelecionado);
   console.log(resultEgg)
 }
+document.getElementById("ordens").addEventListener('change', (event) => {
+
+  const ordem = event.target.value.split("|");
+  const sortBy = ordem[0];
+  const sortOrder = ordem[1]
+  const resultado = sortData(pokemons, sortBy, sortOrder);
+  console.log("resultado", resultado);
+})
