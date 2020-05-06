@@ -23,7 +23,6 @@ body {
 }
 
 .nav {
-  position: absolute;
   top: 5%;
   right: 10%;
   /* margin-top: 10%; */
@@ -71,7 +70,7 @@ body {
   height: 40px;
 }
 
-#pesquisar {
+input#pesquisar {
   width: 200px;
   height: 20px;
   float: left;
@@ -80,7 +79,7 @@ body {
   border-radius: 6px;
 }
 
-.btn {
+input.btn {
   width: 16px;
   height: 16px;
   background-color: rgb(18, 19, 17);
@@ -89,9 +88,9 @@ body {
   border-radius: 6px;
 }
 
-#pesquisar:focus {
+input#pesquisar:focus {
   border: solid 2px rgb(84, 106, 127);
-}
+} 
 
 .legend {
   color: rgb(17, 24, 87);
@@ -118,7 +117,8 @@ body {
   transform: rotateY(180deg);
 }
 
-.front, .back {
+.front,
+.back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -163,6 +163,10 @@ footer {
   text-align: center;
   display: inline-block;
   margin: 10px;
+}
+
+.invisible {
+  display: none;
 }
 
 @media screen and (max-width: 490px) {
