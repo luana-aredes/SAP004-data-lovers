@@ -9,7 +9,7 @@ body {
   text-align: center;
   font-size: 10vw;
   margin: 30px;
-      
+
 }
 
 @font-face {
@@ -32,7 +32,7 @@ body {
   margin: 0 0 0 15px;
   border-radius: 5px;
   padding: 5px;
-  
+
 }
 
 .item a {
@@ -135,6 +135,10 @@ footer {
   text-align: center;
   display: inline-block;
   margin: 10px;
+}
+
+.invisible {
+  display: none;
 }
 
 @media screen and (max-width: 490px) {
