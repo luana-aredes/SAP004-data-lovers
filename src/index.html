@@ -36,11 +36,11 @@
     </section>
     <section class="filtros">
       <legend class="legend"> Ordenar por: </legend>
-      <select>
-        <option class="option"> Alfabética A-Z</option>
-        <option class="option"> Alfabética Z-A</option>
-        <option class="option" selected>Numérica Crescente</option>
-        <option class="option"> Numérica Decrescente</option>
+      <select id="ordens">
+        <option class="option" value="name|asc"> Alfabética A-Z</option>
+        <option class="option" value="name|desc"> Alfabética Z-A</option>
+        <option class="option" value="num|asc" selected>Numérica Crescente</option>
+        <option class="option" value="num|desc"> Numérica Decrescente</option>
       </select>
     </section>
     <form action="" method=submit class="pesquisa">
