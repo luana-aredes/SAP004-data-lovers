@@ -1,5 +1,5 @@
 body {
-  background-image: url(fundo_paisagem.jpg);
+  background-image: url(imagens/fundo_paisagem.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -9,20 +9,25 @@ body {
   text-align: center;
   font-size: 10vw;
   margin: 30px;
-      
+  <<<<<<< HEAD=======font-family: pokemon;
+  color: #ffcb08;
+  -webkit-text-stroke-width: 2px;
+  /* largura da borda */
+  -webkit-text-stroke-color: #385fab;
+  /* cor da borda */
+  >>>>>>>f75a40797a42e1d350508fc39878de09453b7405
 }
 
 @font-face {
-  font-family: Pokemon;
-  src: url(pokemon.ttf)
+  font-family: pokemon;
+  src: url(font/pokemon.ttf)
 }
-
 
 .nav {
   position: absolute;
-  top: auto;
-  right: 20px;
-  margin-top: 20px;
+  top: 5%;
+  right: 10%;
+  /* margin-top: 10%; */
   width: 940px;
   text-align: right;
 }
@@ -32,14 +37,13 @@ body {
   margin: 0 0 0 15px;
   border-radius: 5px;
   padding: 5px;
-  
 }
 
 .item a {
   text-transform: uppercase;
-  color: rgb(17, 24, 87);
+  color: rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -58,9 +62,36 @@ body {
 }
 
 .filtrar {
-  padding: 150px 0 0 15px;
+  padding: 50px 0 0 15px;
   color: rgb(17, 24, 87);
   font-size: 22px;
+}
+
+.pesquisa {
+  width: 400px;
+  height: 40px;
+}
+
+#pesquisar {
+  width: 200px;
+  height: 20px;
+  float: left;
+  font-family: Georgia;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.btn {
+  width: 16px;
+  height: 16px;
+  background-color: rgb(18, 19, 17);
+  padding: 6px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#pesquisar:focus {
+  border: solid 2px rgb(84, 106, 127);
 }
 
 .legend {
@@ -106,7 +137,6 @@ body {
   background-color: rgba(223, 221, 221, 0.5);
   box-shadow: 4px 4px rgb(41, 117, 26, 0.4);
   border-radius: 10px;
-
   /*Primeiro vamos girar back a 180 graus. Como ele inicialmente estará de costas para nós, vamos rotacioná-lo.*/
   transform: rotateY(180deg);
   text-align: left;
@@ -137,8 +167,11 @@ footer {
   margin: 10px;
 }
 
-@media screen and (max-width: 490px) {
+.invisible {
+  display: none;
+}
 
+@media screen and (max-width: 490px) {
   .nav {
     width: auto;
     position: static;

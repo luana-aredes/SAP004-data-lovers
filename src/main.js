@@ -1,4 +1,7 @@
 import {
+  filtro
+} from './data.js';
+import {
   sortData
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
@@ -17,17 +20,18 @@ for (const pokemon of pokemons) {
 }
 
 types = [...new Set(types)];
-let typesHtml = '<option class="option"></option>'
+let typesHtml = '<option class="options"></option>'
+
 for (const type of types) {
-  typesHtml += '<option class="option" value="' + type + '">' + type + '</option>'
+  typesHtml += '<option class="options" value="' + type + '">' + type + '</option>'
 }
 
-let eggsHtml = '<option class="option"></option>'
+let eggsHtml = '<option class="option-egg"></option>'
 for (const egg of eggs) {
-  eggsHtml += '<option class="option" value=" ' + egg + '">' + egg + '</option>'
+  eggsHtml += '<option class="option-egg" value="' + egg + '">' + egg + '</option>'
 }
-
 document.getElementById("types").innerHTML = typesHtml
+
 document.getElementById("eggs").innerHTML = eggsHtml
 
 function mostrarNaTela(pokemonArray) {
@@ -55,20 +59,46 @@ function mostrarNaTela(pokemonArray) {
     cards += '</div>'
   }
 return document.getElementById("pokemonList").innerHTML = cards
+
 }
 
 mostrarNaTela(pokemons)
 
+
+let pokemonType = document.getElementById("types");
+pokemonType.addEventListener("click", seletorDeTipo)
+console.log(pokemonType)
+
+function seletorDeTipo() {
+  const tipoDePokemon1 = pokemonType.selectedIndex;
+  const tipoDePokemon2 = pokemonType.options;
+  const typeSelecionado = tipoDePokemon2[tipoDePokemon1].text;
+  const resultType = filtro.filterByType(pokemons, typeSelecionado);
+
+  console.log(resultType)
+}
+
+let pokemonEgg = document.getElementById("eggs");
+pokemonEgg.addEventListener("click", seletorDeEgg)
+console.log(pokemonEgg)
+
+function seletorDeEgg() {
+  const tipoDePokemon3 = pokemonEgg.selectedIndex;
+  const tipoDePokemon4 = pokemonEgg.options;
+  const typeSelecionado = tipoDePokemon4[tipoDePokemon3].text;
+  const resultEgg = filtro.filterByEgg(pokemons, typeSelecionado);
+  console.log(resultEgg)
+}
 document.getElementById("ordens").addEventListener('change', (event) => {
 
   const ordem = event.target.value.split("|");
   const sortBy = ordem[0];
   const sortOrder = ordem[1]
   const resultado = sortData(pokemons, sortBy, sortOrder);
+  
   mostrarNaTela(resultado)
   
 })
-
-  
-
+  console.log("resultado", resultado);
+})
 
