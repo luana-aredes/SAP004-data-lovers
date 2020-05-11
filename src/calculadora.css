@@ -1,0 +1,8 @@
+.fieldset {
+  border: none;
+}
+
+form {
+  border: orangered 2px solid;
+  width: 600px;
+}
