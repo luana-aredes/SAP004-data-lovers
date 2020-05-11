@@ -1,8 +1,9 @@
 export const filtro = {
   filterByType(data, args) {
     return data.filter((poke) => {
-      return poke.type[0] === args;
+      return poke.type[0] === args || poke.type[1] === args;
     });
+
   },
   filterByEgg(data, args) {
     return data.filter((poke) => {
@@ -10,6 +11,16 @@ export const filtro = {
     });
   }
 };
+
+/*export const filtroPesquisa = {
+  filterByName(data, args) {
+    return data.filter((poke) => {
+      return poke.name === args
+    });
+  }
+};
+*/
+
 
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {

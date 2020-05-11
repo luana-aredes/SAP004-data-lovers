@@ -1,5 +1,5 @@
 body {
-  background-image: url(imagens/fundo_paisagem.jpg);
+  background-image: url(fundo_paisagem.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -126,13 +126,13 @@ input#pesquisar:focus {
 
 .front {
   background-color: rgba(223, 221, 221, 0.5);
-  box-shadow: 4px 4px rgb(31, 126, 12, 0.4);
+  box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
   border-radius: 10px;
 }
 
 .back {
   background-color: rgba(223, 221, 221, 0.5);
-  box-shadow: 4px 4px rgb(41, 117, 26, 0.4);
+  box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
   border-radius: 10px;
   /*Primeiro vamos girar back a 180 graus. Como ele inicialmente estará de costas para nós, vamos rotacioná-lo.*/
   transform: rotateY(180deg);
@@ -164,7 +164,16 @@ footer {
   margin: 10px;
 }
 
-.invisible {
+#porcentagem-de-tipo-de-pokemon {
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(223, 221, 221, 0.7);
+  height: 40px;
+  width: 700px;
+  text-align: center;
+}
+
+.invisivel {
   display: none;
 }
 
