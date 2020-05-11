@@ -17,11 +17,9 @@ body {
 }
 
 .nav {
-  /*position: absolute;*/
-  top: 5%;
+   /*top: 5%;
   right: 10%;
-  /* margin-top: 10%; */
-  width: 940px;
+  width: 940px;*/
   text-align: right;
 }
 
@@ -61,7 +59,7 @@ body {
 }
 
 .pesquisa {
-  width: 400px;
+  /*width: 400px;*/
   height: 40px;
 }
 
