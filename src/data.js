@@ -1,10 +1,31 @@
-// funções de exemplo
-
-export const example = () => {
-  return 'example';
+export const filtro = {
+  filterByType(data, args) {
+    return data.filter((poke) => {
+      return poke.type[0] === args;
+    });
+  },
+  filterByEgg(data, args) {
+    return data.filter((poke) => {
+      return poke.egg === args;
+    });
+  }
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export const sortData = (data, sortBy, sortOrder) => {
+  data.sort(function (a, b) {
+    if (a[sortBy] > b[sortBy]) {
+      return 1;
+    }
+    if (a[sortBy] < b[sortBy]) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
 
+  if (sortOrder === "desc") {
+    data.reverse()
+  }
+
+  return data
+}

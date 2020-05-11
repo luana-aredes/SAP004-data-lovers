@@ -1,73 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8" />
-  <title> Data Lovers </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Pokefã </title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
-    <h1 class="titulo"> PokeFã </h1>
-    <nav class="nav">
-      <ul>
-        <li class="item"><a href="index.html"> Página Inicial </a></li>
-        <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
-        <li class="item"><a href="calculadora.html"> Calculadora </a></li>
-      </ul>
-    </nav>
+          <h1 class="titulo"> PokeFÃ </h1>
+            <nav class="nav">
+        <ul>
+          <li class="item"><a href="index.html"> Página Inicial </a></li>
+          <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
+          <li class="item"><a href="calculadora.html"> Calculadora </a></li>
+        </ul>
+      </nav>
   </header>
   <main>
     <h3 class="filtrar"> Filtrar por: </h3>
     <section class="filtros">
-      <legend> Tipo </legend>
-      <select>
-        <option class="option"> Fogo </option>
-        <option class="option"> Água </option>
-        <option class="option"> Planta </option>
-        <option class="option"> Elétrico </option>
-        <option class="option"> Normal </option>
-        <option class="option"> Gelo </option>
-        <option class="option"> Veneno </option>
-        <option class="option"> Lutador </option>
-        <option class="option"> Terra </option>
-        <option class="option"> Pedra </option>
-        <option class="option"> Psíquico </option>
-        <option class="option"> Inseto </option>
-        <option class="option"> Dragão </option>
-        <option class="option"> Fada </option>
-        <option class="option"> Fantasma </option>
-        <option class="option"> Noturno </option>
-      </select>
-    </section>
-
-    <section class="filtros">
-      <legend> Ovos </legend>
-      <select>
-        <option class="option"> 2 km </option>
-        <option class="option"> 5 km </option>
-        <option class="option"> 7 km </option>
-        <option class="option"> 10 km </option>
-      </select>
-    </section>
-
-    <section class="filtros">
-      <legend> Ordenar por: </legend>
-      <select>
-        <option class="option"> Alfabética A-Z</option>
-        <option class="option"> Alfabética Z-A</option>
-        <option class="option"> Numérica Crescente</option>
-        <option class="option"> Numérica Decrescente</option>
+      <legend class="legend"> Tipo </legend>
+      <select id="types">
       </select>
     </section>
     <section class="filtros">
-      <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar">
+      <legend class="legend"> Ovos </legend>
+      <select id="eggs">
+      </select>
     </section>
-
+    <section class="filtros">
+      <legend class="legend"> Ordenar por: </legend>
+      <select id="ordens">
+        <option class="option" value="name|asc"> Alfabética A-Z</option>
+        <option class="option" value="name|desc"> Alfabética Z-A</option>
+        <option class="option" value="num|asc" selected>Numérica Crescente</option>
+        <option class="option" value="num|desc"> Numérica Decrescente</option>
+      </select>
+    </section>
+    <form action="" method=submit class="pesquisa">
+      <input type="search" id="pesquisar" placeholder="Pesquisar" list="data.pokemonList">
+      <input type="image" src="imagens/lupa.png" class="btn" button="executar()">
+      <datalist id="historico">
+        <option value="pikachu"></option>
+      </datalist>
+    </form>
+    <section id="pokemonList">
+    </section>
   </main>
   <footer>
-
+    Copyright Lab- meninas
   </footer>
 
   <div id="root"></div>
