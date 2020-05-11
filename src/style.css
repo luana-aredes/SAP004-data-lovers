@@ -9,6 +9,12 @@ body {
   text-align: center;
   font-size: 10vw;
   margin: 30px;
+  font-family: pokemon;
+  color: #ffcb08;
+  -webkit-text-stroke-width: 2px;
+  /* largura da borda */
+  -webkit-text-stroke-color: #385fab;
+  /* cor da borda     */
 }
 
 @font-face {
@@ -17,11 +23,13 @@ body {
 }
 
 .nav {
-  /*position: absolute;*/
+<<<<<<< HEAD
+   /*top: 5%;
+=======
   top: 5%;
+>>>>>>> 604c0051f17ae6803b4659a4319892f6155e2cf3
   right: 10%;
-  /* margin-top: 10%; */
-  width: 940px;
+  width: 940px;*/
   text-align: right;
 }
 
@@ -61,11 +69,11 @@ body {
 }
 
 .pesquisa {
-  width: 400px;
+  /*width: 400px;*/
   height: 40px;
 }
 
-/*#pesquisar {
+input#pesquisar {
   width: 200px;
   height: 20px;
   float: left;
@@ -74,7 +82,7 @@ body {
   border-radius: 6px;
 }
 
-.btn {
+input.btn {
   width: 16px;
   height: 16px;
   background-color: rgb(18, 19, 17);
@@ -83,9 +91,9 @@ body {
   border-radius: 6px;
 }
 
-#pesquisar:focus {
+input#pesquisar:focus {
   border: solid 2px rgb(84, 106, 127);
-} */
+} 
 
 .legend {
   color: rgb(17, 24, 87);
