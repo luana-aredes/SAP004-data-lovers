@@ -4,6 +4,11 @@ import {
 import {
   sortData
 } from './data.js';
+/* import {
+  filtroPesquisa
+} from './data.js';
+*/
+
 import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
@@ -101,3 +106,15 @@ document.getElementById("ordens").addEventListener('change', (event) => {
   const resultado = sortData(pokemons, sortBy, sortOrder);
   mostrarNaTela(resultado)
 })
+
+/*let campoFiltro = document.getElementById("filtrar-pokemon")
+campoFiltro.addEventListener("input", filtrarPokemons);
+
+function filtrarPokemons() {
+  let textoFiltro = campoFiltro.value
+  const resultPesquisa = filtroPesquisa.filterByName(pokemons, textoFiltro)
+  mostrarNaTela(resultPesquisa)
+  console.log(textoFiltro)
+  console.log(resultPesquisa)
+}
+*/

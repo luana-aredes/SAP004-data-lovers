@@ -12,6 +12,16 @@ export const filtro = {
   }
 };
 
+/*export const filtroPesquisa = {
+  filterByName(data, args) {
+    return data.filter((poke) => {
+      return poke.name === args
+    });
+  }
+};
+*/
+
+
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
     if (a[sortBy] > b[sortBy]) {
