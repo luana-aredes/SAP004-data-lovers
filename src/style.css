@@ -9,6 +9,12 @@ body {
   text-align: center;
   font-size: 10vw;
   margin: 30px;
+  font-family: pokemon;
+  color: #ffcb08;
+  -webkit-text-stroke-width: 2px;
+  /* largura da borda */
+  -webkit-text-stroke-color: #385fab;
+  /* cor da borda     */
 }
 
 @font-face {
@@ -64,7 +70,7 @@ body {
   height: 40px;
 }
 
-/*#pesquisar {
+input#pesquisar {
   width: 200px;
   height: 20px;
   float: left;
@@ -73,7 +79,7 @@ body {
   border-radius: 6px;
 }
 
-.btn {
+input.btn {
   width: 16px;
   height: 16px;
   background-color: rgb(18, 19, 17);
@@ -82,9 +88,9 @@ body {
   border-radius: 6px;
 }
 
-#pesquisar:focus {
+input#pesquisar:focus {
   border: solid 2px rgb(84, 106, 127);
-} */
+} 
 
 .legend {
   color: rgb(17, 24, 87);
