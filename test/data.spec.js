@@ -19,13 +19,13 @@ describe("Testando a função sortData", () => {
   it("é uma função", () => {
     expect(typeof sortData).toBe("function");
   });
-  it("Esta ordenando por name|asc", () => {
+  it("Esta ordenando por nome|asc", () => {
     expect(sortData(sortByName, "name")).toEqual([{ "name": "Bulbasaur" }, { "name": "Caterpie" }, { "name": "Pikachu" }]);
   });
   it("Esta ordenando por id|asc", () => {
     expect(sortData(sortById, "id")).toEqual([{ "id": 1 }, { "id": 10 }, { "id": 25 }]);
   });
-  it("Está ordenando por name|desc", () => {
+  it("Está ordenando por nome|desc", () => {
     expect(sortData(sortByName, "name", "desc")).toEqual([{ "name": "Pikachu" }, { "name": "Caterpie" }, { "name": "Bulbasaur" }]);
   });
   it("Esta ordenando por id|desc", () => {
