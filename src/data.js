@@ -12,14 +12,14 @@ export const filtro = {
   }
 };
 
-/*export const filtroPesquisa = {
+export const filtroPesquisa = {
   filterByName(data, args) {
     return data.filter((poke) => {
       return poke.name === args
     });
   }
 };
-*/
+
 
 
 export const sortData = (data, sortBy, sortOrder) => {
