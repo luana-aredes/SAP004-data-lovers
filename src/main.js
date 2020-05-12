@@ -7,28 +7,31 @@ import data from './data/pokemon/pokemon.js';
 
 const pokemons = data.pokemon
 let types = []
-let eggs = new Set();
+let eggs = [];
 
 for (const pokemon of pokemons) {
   for (const type of pokemon.type) {
     types.push(type);
   }
   if (pokemon.egg == "Not in Eggs") continue;
-  eggs.add(pokemon.egg);
+  eggs.push(pokemon.egg);
 }
 
-types = [...new Set(types)];
+//types = [...new Set(types)];
+types = types.filter((type, index) => types.indexOf(type) === index)
 let typesHtml = '<option class="options"> Todos </option>'
 
 for (const type of types) {
   typesHtml += '<option class="options" value="' + type + '">' + type + '</option>'
 }
 
+eggs = eggs.filter((egg, index) => eggs.indexOf(egg) === index)
 let eggsHtml = '<option class="option-egg"></option>'
 for (const egg of eggs) {
   eggsHtml += '<option class="option-egg" value="' + egg + '">' + egg + '</option>'
 }
 document.getElementById("types").innerHTML = typesHtml
+
 document.getElementById("eggs").innerHTML = eggsHtml
 
 function mostrarNaTela(pokemonArray) {
