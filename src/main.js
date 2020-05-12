@@ -96,3 +96,12 @@ document.getElementById("ordens").addEventListener('change', (event) => {
   mostrarNaTela(resultado)
 
 })
+
+const campoDeBusca = document.getElementById("cpBusca")
+campoDeBusca.addEventListener("input", searchName)
+function searchName () {
+const nomeDigitado = campoDeBusca.value 
+const letrasDigitadas = new RegExp(nomeDigitado, "i")
+const resultBusca = filtro.filterByName(pokemons, letrasDigitadas)
+mostrarNaTela(resultBusca)
+}
