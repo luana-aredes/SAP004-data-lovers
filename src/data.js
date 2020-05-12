@@ -12,15 +12,6 @@ export const filtro = {
   }
 };
 
-export const filtroPesquisa = {
-  filterByName(data, args) {
-    return data.filter((poke) => {
-      return poke.name === args
-    });
-  }
-};
-
-
 
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
@@ -30,8 +21,7 @@ export const sortData = (data, sortBy, sortOrder) => {
     if (a[sortBy] < b[sortBy]) {
       return -1;
     }
-    // a must be equal to b
-    return 0;
+
   });
 
   if (sortOrder === "desc") {
