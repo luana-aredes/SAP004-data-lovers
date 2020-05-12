@@ -9,9 +9,13 @@ export const filtro = {
     return data.filter((poke) => {
       return poke.egg === args;
     });
+  },
+  filterByName(data, args) {
+    return data.filter((poke) => {
+      return args.test(poke.name)
+    });
   }
 };
-
 
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
@@ -24,9 +28,9 @@ export const sortData = (data, sortBy, sortOrder) => {
 
   });
 
-  if (sortOrder === "desc") {
-    data.reverse()
-  }
+      if (sortOrder === "desc") {
+        data.reverse()
+      }
 
   return data
 }

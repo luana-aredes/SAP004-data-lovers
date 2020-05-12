@@ -1,5 +1,5 @@
 body {
-  background-image: url(fundo_paisagem.jpg);
+  background-image: url(imagens/fundo_paisagem.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,7 +14,7 @@ body {
   -webkit-text-stroke-width: 2px;
   /* largura da borda */
   -webkit-text-stroke-color: #385fab;
-  /* cor da borda     */
+  /* cor da borda     */  
 }
 
 @font-face {
@@ -57,39 +57,6 @@ body {
   color: rgb(17, 24, 87);
   font-weight: bold;
 }
-
-.filtrar {
-  padding: 50px 0 0 15px;
-  color: rgb(17, 24, 87);
-  font-size: 22px;
-}
-
-.pesquisa {
-  /*width: 400px;*/
-  height: 40px;
-}
-
-input#pesquisar {
-  width: 200px;
-  height: 20px;
-  float: left;
-  font-family: Georgia;
-  font-size: 18px;
-  border-radius: 6px;
-}
-
-input.btn {
-  width: 16px;
-  height: 16px;
-  background-color: rgb(18, 19, 17);
-  padding: 6px 6px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-input#pesquisar:focus {
-  border: solid 2px rgb(84, 106, 127);
-} 
 
 .legend {
   color: rgb(17, 24, 87);
