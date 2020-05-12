@@ -25,7 +25,7 @@ export const sortData = (data, sortBy, sortOrder) => {
     if (a[sortBy] < b[sortBy]) {
       return -1;
     }
-    
+
   });
 
       if (sortOrder === "desc") {
@@ -34,5 +34,3 @@ export const sortData = (data, sortBy, sortOrder) => {
 
   return data
 }
-
-
