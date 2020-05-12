@@ -1,32 +1,35 @@
 import {
-  example,
-  anotherExample
+  sortData 
 } from '../src/data.js';
 
+const sortByName = [
+  { "name": "Bulbasaur" },
+  { "name": "Pikachu" },
+  { "name": "Caterpie" }
+];
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+const sortById = [
+  { "id": 1 },
+  { "id": 25 },
+  { "id": 10 }
+
+ ];
+
+describe("Testando a função sortData", () => {
+  it("é uma função", () => {
+    expect(typeof sortData).toBe("function");
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it("Esta ordenando por nome|asc", () => {
+    expect(sortData(sortByName, "name")).toEqual([{ "name": "Bulbasaur" }, { "name": "Caterpie" }, { "name": "Pikachu" }]);
+  });
+  it("Esta ordenando por id|asc", () => {
+    expect(sortData(sortById, "id")).toEqual([{ "id": 1 }, { "id": 10 }, { "id": 25 }]);
+  });
+  it("Está ordenando por nome|desc", () => {
+    expect(sortData(sortByName, "name", "desc")).toEqual([{ "name": "Pikachu" }, { "name": "Caterpie" }, { "name": "Bulbasaur" }]);
+  });
+  it("Esta ordenando por id|desc", () => {
+    expect(sortData(sortById, "id", "desc")).toEqual([{ "id": 25 }, { "id": 10 }, { "id": 1 }]);
   });
 });
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-
-/*test('object assignment', () => {
-  const data = {one: 1};
-  data['two'] = 2;
-  expect(data).toEqual({one: 1, two: 2});
-}); */
+  

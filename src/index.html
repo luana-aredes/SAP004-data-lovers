@@ -10,16 +10,15 @@
 
 <body>
   <header>
-    <div class="titulo">
-      <h1 class="titulo"> PokeFã </h1>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li class="item"><a href="index.html"> Página Inicial </a></li>
-          <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
-          <li class="item"><a href="calculadora.html"> Calculadora </a></li>
-        </ul>
-      </nav>
+    <h1 class="titulo"> PokeFã </h1>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li class="item"><a href="index.html"> Página Inicial </a></li>
+        <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
+        <li class="item"><a href="calculadora.html"> Calculadora </a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <h3 class="filtrar"> Filtrar por: </h3>
@@ -42,8 +41,10 @@
         <option class="option" value="num|desc"> Numérica Decrescente</option>
       </select>
     </section>
-    <section>
+    <section class="filtros">
       <input type="text" id="cpBusca" placeholder="Pesquisar" autocomplete="off">
+    </section>
+    <section id="porcentagem-de-tipo-de-pokemon">
     </section>
     <section id="pokemonList">
     </section>
@@ -54,4 +55,5 @@
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
+
 </html>
