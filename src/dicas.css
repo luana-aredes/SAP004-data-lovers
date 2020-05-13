@@ -1,0 +1,51 @@
+body {
+    background-image: url(imagens/fundo_paisagem.jpg);
+}
+
+.titulo, h2 {
+    font-size: 80px;
+    text-align: center;
+    font-family: pokemon;
+    color: #ffcb08;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #385fab;
+    margin: 0px;
+}
+h2 {
+font-size: 30px;
+}
+.item {
+    display: inline;
+    margin: 0px;
+    border-radius: 50px;
+    padding: 1px;
+  } 
+.item a {
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 0px;
+  }
+
+@font-face {
+    font-family: pokemon;
+    src: url(font/pokemon.ttf)
+}
+
+.nav {
+    text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+footer {
+    background-image: linear-gradient(to right, #639d25, #427768);
+    height: 25px;
+    color: beige;
+    text-align: center;
+    padding-top: 25px;
+  }
