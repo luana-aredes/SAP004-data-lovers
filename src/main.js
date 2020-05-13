@@ -1,5 +1,7 @@
 import {
-  filtro,
+  filterBy,
+  calculator,
+  filterByName,
   sortData
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
@@ -8,11 +10,11 @@ const pokemons = data.pokemon
 let types = []
 let eggs = [];
 
+
 for (const pokemon of pokemons) {
   for (const type of pokemon.type) {
     types.push(type);
   }
-  if (pokemon.egg == "Not in Eggs") continue;
   eggs.push(pokemon.egg);
 }
 
@@ -25,6 +27,7 @@ for (const type of types) {
 }
 
 eggs = eggs.filter((egg, index) => eggs.indexOf(egg) === index)
+
 let eggsHtml = '<option class="option-egg"></option>'
 for (const egg of eggs) {
   eggsHtml += '<option class="option-egg" value="' + egg + '">' + egg + '</option>'
@@ -68,11 +71,11 @@ function seletorDeTipo() {
   const tipoDePokemon1 = pokemonType.selectedIndex;
   const tipoDePokemon2 = pokemonType.options;
   const typeSelecionado = tipoDePokemon2[tipoDePokemon1].text;
-  const resultType = filtro.filterByType(pokemons, typeSelecionado);
-  const porcentagem = (resultType.length / pokemons.length) * 100
-  imprimirPorcentagem.innerHTML = ` A porcentagem de pokemons do tipo ${typeSelecionado} é de ${porcentagem.toFixed(2)} % em relação a todos os outros pokemons.`
-  imprimirPorcentagem.classList.remove("invisivel");
+  const resultType = filterBy(pokemons, "type", typeSelecionado);
+  const porcentagem = calculator(pokemons, resultType);
   mostrarNaTela(resultType)
+  imprimirPorcentagem.innerHTML = ` A porcentagem de pokemons do tipo ${typeSelecionado} é de ${porcentagem} % em relação a todos os outros pokemons.`
+  imprimirPorcentagem.classList.remove("invisivel");
   if (typeSelecionado == "Todos") {
     mostrarNaTela(pokemons);
     imprimirPorcentagem.classList.add("invisivel");
@@ -83,7 +86,7 @@ function seletorDeEgg() {
   const tipoDePokemon3 = pokemonEgg.selectedIndex;
   const tipoDePokemon4 = pokemonEgg.options;
   const typeSelecionado = tipoDePokemon4[tipoDePokemon3].text;
-  const resultEgg = filtro.filterByEgg(pokemons, typeSelecionado);
+  const resultEgg = filterBy(pokemons, "egg", typeSelecionado);
   imprimirPorcentagem.classList.add("invisivel");
   mostrarNaTela(resultEgg);
   if (typeSelecionado == "") {
@@ -100,9 +103,10 @@ document.getElementById("ordens").addEventListener('change', (event) => {
 })
 const campoDeBusca = document.getElementById("cpBusca")
 campoDeBusca.addEventListener("input", searchName)
-function searchName () {
-const nomeDigitado = campoDeBusca.value 
-const letrasDigitadas = new RegExp(nomeDigitado, "i")
-const resultBusca = filtro.filterByName(pokemons, letrasDigitadas)
-mostrarNaTela(resultBusca)
+
+function searchName() {
+  const nomeDigitado = campoDeBusca.value
+  const letrasDigitadas = new RegExp(nomeDigitado, "i")
+  const resultBusca = filterByName(pokemons, letrasDigitadas)
+  mostrarNaTela(resultBusca)
 }

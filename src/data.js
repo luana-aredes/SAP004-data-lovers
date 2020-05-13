@@ -1,21 +1,15 @@
-export const filtro = {
-  filterByType(data, args) {
-    return data.filter((poke) => {
-      return poke.type[0] === args || poke.type[1] === args;
-    });
+export const filterBy = (data, orderBy, args) => data.filter((poke) => {
+  return poke[orderBy].includes(args);
+});
 
-  },
-  filterByEgg(data, args) {
-    return data.filter((poke) => {
-      return poke.egg === args;
-    });
-  },
-  filterByName(data, args) {
-    return data.filter((poke) => {
-      return args.test(poke.name)
-    });
-  }
+export const calculator = (data, valorFiltrado) => {
+  const porcentagem = ((valorFiltrado.length / data.length) * 100).toFixed(2);
+  return porcentagem;
 };
+
+export const filterByName = (data, args) => data.filter((poke) => {
+  return args.test(poke.name);
+});
 
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
@@ -28,9 +22,9 @@ export const sortData = (data, sortBy, sortOrder) => {
 
   });
 
-      if (sortOrder === "desc") {
-        data.reverse()
-      }
+  if (sortOrder === "desc") {
+    data.reverse()
+  }
 
   return data
 }
