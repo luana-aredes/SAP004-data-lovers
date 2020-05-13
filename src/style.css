@@ -5,36 +5,31 @@ body {
   background-attachment: fixed;
 }
 
-.titulo {
+.titulo { 
+  font-size: 80px;
   text-align: center;
-  font-size: 10vw;
-  margin: 30px;
-  font-family: pokemon;
+  font-family: pokemon; 
   color: #ffcb08;
   -webkit-text-stroke-width: 2px;
-  /* largura da borda */
   -webkit-text-stroke-color: #385fab;
-  /* cor da borda     */  
+  margin: 0px;
 }
 
 @font-face {
   font-family: pokemon;
   src: url(font/pokemon.ttf)
-}
+} 
 
 .nav {
-   /*top: 5%;
-  right: 10%;
-  width: 940px;*/
-  text-align: right;
+text-align: center;
 }
 
 .item {
   display: inline;
-  margin: 0 0 0 15px;
-  border-radius: 5px;
-  padding: 5px;
-}
+  margin: 0px;
+  border-radius: 50px;
+  padding: 1px;
+} 
 
 .item a {
   text-transform: uppercase;
@@ -42,6 +37,7 @@ body {
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
+  margin: 0px;
 }
 
 .item a:hover {
@@ -59,10 +55,9 @@ body {
 }
 
 .legend {
-  color: rgb(17, 24, 87);
+  color: #000000;
   font-weight: bold;
-  font-size: 18px;
-  ;
+  font-size: 25px;
 }
 
 .card-container {
@@ -83,8 +78,7 @@ body {
   transform: rotateY(180deg);
 }
 
-.front,
-.back {
+.front, .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -116,10 +110,10 @@ body {
 
 footer {
   background-image: linear-gradient(to right, #639d25, #427768);
-  height: 100px;
+  height: 25px;
   color: beige;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 25px;
 }
 
 #pokemonList .card {
