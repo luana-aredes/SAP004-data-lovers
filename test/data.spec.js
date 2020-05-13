@@ -4,7 +4,6 @@ import {
   calculator
 } from '../src/data.js';
 
-
 const pokemon = [{
     "name": "Bulbasaur",
     "id": 1,

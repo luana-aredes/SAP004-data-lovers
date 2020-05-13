@@ -1,6 +1,7 @@
 import {
   filterBy,
   calculator,
+  filterByName,
   sortData
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
@@ -106,9 +107,10 @@ document.getElementById("ordens").addEventListener('change', (event) => {
 })
 const campoDeBusca = document.getElementById("cpBusca")
 campoDeBusca.addEventListener("input", searchName)
-function searchName () {
-const nomeDigitado = campoDeBusca.value 
-const letrasDigitadas = new RegExp(nomeDigitado, "i")
-const resultBusca = filtro.filterByName(pokemons, letrasDigitadas)
-mostrarNaTela(resultBusca)
+
+function searchName() {
+  const nomeDigitado = campoDeBusca.value
+  const letrasDigitadas = new RegExp(nomeDigitado, "i")
+  const resultBusca = filterByName(pokemons, letrasDigitadas)
+  mostrarNaTela(resultBusca)
 }

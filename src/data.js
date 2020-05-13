@@ -7,6 +7,10 @@ export const calculator = (data, valorFiltrado) => {
   return porcentagem;
 };
 
+export const filterByName = (data, args) => data.filter((poke) => {
+  return args.test(poke.name);
+});
+
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
     if (a[sortBy] > b[sortBy]) {
