@@ -1,15 +1,10 @@
-export const filtro = {
-  filterByType(data, args) {
-    return data.filter((poke) => {
-      return poke.type[0] === args || poke.type[1] === args;
-    });
+export const filterBy = (data, orderBy, args) => data.filter((poke) => {
+  return poke[orderBy].includes(args);
+});
 
-  },
-  filterByEgg(data, args) {
-    return data.filter((poke) => {
-      return poke.egg === args;
-    });
-  }
+export const calculator = (data, valorFiltrado) => {
+  const porcentagem = ((valorFiltrado.length / data.length) * 100).toFixed(2);
+  return porcentagem;
 };
 
 
