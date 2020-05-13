@@ -7,7 +7,6 @@ export const calculator = (data, valorFiltrado) => {
   return porcentagem;
 };
 
-
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
     if (a[sortBy] > b[sortBy]) {
