@@ -1,7 +1,5 @@
 import {
-  filtro
-} from './data.js';
-import {
+  filtro,
   sortData
 } from './data.js';
 import data from './data/pokemon/pokemon.js';
@@ -19,19 +17,20 @@ for (const pokemon of pokemons) {
 }
 
 //types = [...new Set(types)];
-types = types.filter((type, index)=> types.indexOf(type)===index)
-let typesHtml = '<option class="options"></option>'
+types = types.filter((type, index) => types.indexOf(type) === index)
+let typesHtml = '<option class="options"> Todos </option>'
 
 for (const type of types) {
   typesHtml += '<option class="options" value="' + type + '">' + type + '</option>'
 }
 
-eggs = eggs.filter((egg, index)=>eggs.indexOf(egg)===index)
+eggs = eggs.filter((egg, index) => eggs.indexOf(egg) === index)
 let eggsHtml = '<option class="option-egg"></option>'
 for (const egg of eggs) {
   eggsHtml += '<option class="option-egg" value="' + egg + '">' + egg + '</option>'
 }
 document.getElementById("types").innerHTML = typesHtml
+
 document.getElementById("eggs").innerHTML = eggsHtml
 
 function mostrarNaTela(pokemonArray) {
@@ -103,7 +102,6 @@ document.getElementById("ordens").addEventListener('change', (event) => {
   const resultado = sortData(pokemons, sortBy, sortOrder);
   mostrarNaTela(resultado)
 })
-
 const campoDeBusca = document.getElementById("cpBusca")
 campoDeBusca.addEventListener("input", searchName)
 function searchName () {
