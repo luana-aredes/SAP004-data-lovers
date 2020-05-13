@@ -33,34 +33,30 @@ document.getElementById("types").innerHTML = typesHtml
 
 document.getElementById("eggs").innerHTML = eggsHtml
 
-function mostrarNaTela(pokemonArray) {
-  let cards = ""
-  for (const pokemon of pokemonArray) {
-    cards += '<div class="card-container">'
-    cards += '<div class="card">'
-    cards += '<div class="front">'
-    cards += '  <div><img src="' + pokemon.img + '" alt="' + pokemon.name + '"></div>'
-    cards += '  <div class="numero">' + pokemon.num + '</div>'
-    cards += '  <div class="nome">' + pokemon.name + '</div>'
-    cards += '  <div class="tipo"> Tipo:' + pokemon.type + '</div>'
-    cards += '  <div class="ovos"> Ovos:' + pokemon.egg + '</div>'
-    cards += '</div>'
-    cards += '<div class="back">'
-    //cards += '  <div class="imagem"><img src="' + pokemon.img + '" alt="' + pokemon.name + '"></div>'
-    cards += '  <div class="altura"> Altura ' + pokemon.height + '</div>'
-    cards += '  <div class="largura"> Largura: ' + pokemon.weight + '</div>'
-    cards += '  <div class="qauntidade-doce"> Doces: ' + pokemon.candy_count + '</div>'
-    cards += '  <div class="chance-aparecer"> Chance de Aparecer: ' + pokemon.spawn_chance + '</div>'
-    cards += '  <div class="tempo-desova"> Tempo de Desova: ' + pokemon.spawn_time + '</div>'
-    cards += '  <div class="fraquezas"> Fraquezas: ' + pokemon.weaknesses + '</div>'
-    cards += '</div>'
-    cards += '</div>'
-    cards += '</div>'
-  }
-  return document.getElementById("pokemonList").innerHTML = cards
-}
+function mostrarNaTela(pokemons) {
+  document.getElementById("pokemonList").innerHTML = pokemons.map((pokemon) => `
+  <div class="card-container">
+    <div class="card">
+  <div class="front">
+   <div><img src="${pokemon.img}"></div>
+     <div class="numero">${pokemon.num}</div>
+        <div class="nome">${pokemon.name}</div>
+        <div class="tipo"> Tipo:${pokemon.type}</div>
+        <div class="ovos"> Ovos:${pokemon.egg}</div>
+      </div>
+      <div class="back">
+      <div class="altura"> Altura: ${pokemon.height}</div>
+      <div class="largura"> Largura: ${pokemon.weight}</div>
+      <div class="qauntidade-doce"> Doces: ${pokemon.candy_count}</div>
+      <div class="chance-aparecer"> Chance de Aparecer: ${pokemon.spawn_chance}</div>
+      <div class="tempo-desova"> Tempo de Desova: ${pokemon.spawn_time}</div>
+      <div class="fraquezas"> Fraquezas: ${pokemon.weaknesses}</div>
+    </div>
+    </div>
+    </div>
+` ).join("")}
 
-mostrarNaTela(pokemons)
+mostrarNaTela(pokemons);
 
 let pokemonType = document.getElementById("types");
 let pokemonEgg = document.getElementById("eggs");
