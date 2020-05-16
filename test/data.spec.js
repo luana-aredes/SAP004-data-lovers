@@ -1,7 +1,8 @@
 import {
   sortData,
   filterBy,
-  calculator
+  calculator,
+  filterByName
 } from '../src/data.js';
 
 const pokemon = [{
@@ -219,3 +220,5 @@ describe("Testando a função calculator", () => {
     );
   });
 });
+
+
