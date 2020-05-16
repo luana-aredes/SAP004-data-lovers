@@ -7,8 +7,9 @@ export const calculator = (data, valorFiltrado) => {
   return porcentagem;
 };
 
-export const filterByName = (data, args) => data.filter((poke) => {
-  return args.test(poke.name);
+export const filterByName = (data, orderByName, args) => data.filter((poke) => {
+  const letrasDigitadas = new RegExp(args, "i")
+  return letrasDigitadas.test(poke[orderByName]);
 });
 
 export const sortData = (data, sortBy, sortOrder) => {

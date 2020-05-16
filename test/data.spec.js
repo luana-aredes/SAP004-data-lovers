@@ -1,7 +1,8 @@
 import {
   sortData,
   filterBy,
-  calculator
+  calculator,
+  filterByName
 } from '../src/data.js';
 
 const pokemon = [{
@@ -217,5 +218,22 @@ describe("Testando a função calculator", () => {
     expect(calculator(pokemon, arrayTypeGrass)).toEqual(
       "66.67"
     );
+  });
+});
+
+describe("Testando a função filterByName", () => {
+  it("é uma função", () => {
+    expect(typeof filterByName).toBe("function");
+  });
+  it("Esta filtrando por nome", () => {
+    expect(filterByName(pokemon, "name", "Charizard")).toEqual([{
+      "name": "Charizard",
+      "id": 6,
+      "type": [
+        "Fire",
+        "Flying"
+      ],
+      "egg": "Not in Eggs",
+    }]);
   });
 });

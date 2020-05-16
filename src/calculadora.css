@@ -3,7 +3,7 @@
 }
 
 form {
-  /* border: orangered 2px solid; */
+  background-color: rgba(223, 221, 221, 0.5);
   width: 600px;
 }
 
@@ -16,17 +16,6 @@ main {
   background-image: url(imagens/fundoCalc.jpeg);
 }
 
-.sub-titulo {
-  font-size: 35px;
-  text-align: center;
-  font-family: pokemon;
-  color: #ffcb08;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #385fab;
-  margin: 0px;
-}
-
-@font-face {
-  font-family: pokemon;
-  src: url(font/pokemon.ttf)
+#sub-titulo {
+  font-size: 50px;
 }
