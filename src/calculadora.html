@@ -2,64 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="calculadora.css" />
-  <title> Calculadora </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calculadora.css" />
+    <title> Calculadora </title>
 </head>
 
 <body>
-  <header>
-    <h1 class="titulo"> PokeFã</h1>
-    <nav class="nav">
-      <ul>
-        <li class="item"><a href="index.html"> Página Inicial </a></li>
-        <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
-      </ul>
-    </nav>
-    <h3 class="sub-titulo"> Calculadora </h3>
-  </header>
-  <main>
-    <form class="form">
-      <fieldset class="fieldset">
-        <p>
-          Degite a quantidade de ovos que você possui e quantos metros em média você caminha por dia. Assim você saberá
-          em quantos dias conseguirá chocar todos os seus ovos.
-        </p>
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="quantidade-2km"> Quantidade de ovos de 2 km </label>
-        <input type="text" autocomplete="off" id="quantidade-2km" placeholder="Valor" />
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="quantidade-5km"> Quantidade de ovos de 5 km </label>
-        <input type="text" autocomplete="off" id="quantidade-5km" placeholder="Valor" />
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="quantidade-5km"> Quantidade de ovos de 7 km </label>
-        <input type="text" autocomplete="off" id="quantidade-7km" placeholder="Valor" />
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="quantidade-7km"> Quantidade de ovos de 10 km </label>
-        <input type="text" autocomplete="off" id="quantidade-10km" placeholder="Valor" />
-      </fieldset>
-      <fieldset class="fieldset">
-        <label for="quantidade-10km"> Quantos metros em média voĉe caminha por dia? </label>
-        <input type="text" autocomplete="off" id="metros-por-dia" placeholder="Valor" />
-      </fieldset>
-      <fieldset class="fieldset">
-        <button type="button" id="button" value="Calcular"> Calcular </button>
-      </fieldset>
-      <fieldset class="fieldset">
-        <textarea cols="60" rows="6" id="resultado-calculadora" class="message" required></textarea>
-      </fieldset>
-    </form>
-  </main>
-  <footer>
-    Copyright Lab- meninas
-  </footer>
-  <script src="calculadora.js" type="module"></script>
+    <header>
+        <section class="barra">
+            <img src="imagens/menu.png" width="50px" height="50px" class="burguer" id="burguer">
+            <h1 class="titulo-mobile"> PokeFÃ </h1>
+        </section>
+        <h1 class="titulo"> PokeFã</h1>
+        <nav class="nav" id="nav">
+            <ul>
+                <li class="item"><a href="index.html"> Página Inicial </a></li>
+                <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
+            </ul>
+        </nav>
+        <h3 class="sub-titulo"> Calculadora </h3>
+    </header>
+    <main>
+        <form class="form">
+            <fieldset class="fieldset">
+                <p>
+                    Degite a quantidade de ovos que você possui e quantos metros em média você caminha por dia. Assim você saberá em quantos dias conseguirá chocar todos os seus ovos.
+                </p>
+            </fieldset>
+            <fieldset class="fieldset">
+                <label for="quantidade-2km"> Quantidade de ovos de 2 km </label>
+                <input type="text" autocomplete="off" id="quantidade-2km" placeholder="Valor" />
+            </fieldset>
+            <fieldset class="fieldset">
+                <label for="quantidade-5km"> Quantidade de ovos de 5 km </label>
+                <input type="text" autocomplete="off" id="quantidade-5km" placeholder="Valor" />
+            </fieldset>
+            <fieldset class="fieldset">
+                <label for="quantidade-5km"> Quantidade de ovos de 7 km </label>
+                <input type="text" autocomplete="off" id="quantidade-7km" placeholder="Valor" />
+            </fieldset>
+            <fieldset class="fieldset">
+                <label for="quantidade-7km"> Quantidade de ovos de 10 km </label>
+                <input type="text" autocomplete="off" id="quantidade-10km" placeholder="Valor" />
+            </fieldset>
+            <fieldset class="fieldset">
+                <label for="quantidade-10km"> Quantos metros em média voĉe caminha por dia? </label>
+                <input type="text" autocomplete="off" id="metros-por-dia" placeholder="Valor" />
+            </fieldset>
+            <fieldset class="fieldset">
+                <button type="button" id="button" value="Calcular"> Calcular </button>
+            </fieldset>
+            <fieldset class="fieldset">
+                <textarea cols="60" rows="6" id="resultado-calculadora" class="message" required></textarea>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        Copyright Lab- meninas
+    </footer>
+    <script src="calculadora.js" type="module"></script>
+    <script src="menu.js" type="module"></script>
 </body>
 
 </html>
