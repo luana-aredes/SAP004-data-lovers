@@ -18,6 +18,7 @@ A partir da pesquisa de usuários, conseguimos identificar as necessidades e ten
 * Historia 3 "Ordenar" - Eu como usuario gostaria de ver os cards na ordem que eu escolher para melhor visualização.
 * História 4 "Buscar" - Eu como usuario gostaria de poder buscar por um pokemon pelo nome para que pudesse ver as informações dele na tela, sem ter que procurar de um por um.
 * História 5 "Estatísticas" - Eu como usuario gostaria de ver as estatísticas do tipo de pokemon escolhido, para saber se são muitos ou poucos que se incluem naquele tipo.
+* História 6 "Calculadora de ovos" 
 
 ### Desenho de interface do usuário
 
