@@ -14,7 +14,15 @@
     margin: auto;
 }
 
-.titulo,
+.titulo {
+    font-size: 80px;
+    font-family: pokemon;
+    color: #ffcb08;
+    text-shadow: 4px 0px 0px blue, 5px 0px 1px blue, -1px 1px 0px blue, 1px -2px 0px blue;
+    margin: 0;
+    text-align: center;
+}
+
 .sub-titulo {
     font-size: 80px;
     text-align: center;
@@ -66,6 +74,15 @@
 .filtros {
     display: inline-block;
     padding: 10px 0 0 15px;
+}
+
+select,
+input {
+    width: 100%;
+    background-color: rgb(188, 229, 234);
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 9px;
 }
 
 .option {
