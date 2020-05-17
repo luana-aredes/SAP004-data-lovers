@@ -1,3 +1,7 @@
+.titulo {
+  display: none;
+}
+
 .fieldset {
   border: none;
   padding: 10px;

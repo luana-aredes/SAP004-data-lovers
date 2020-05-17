@@ -3,6 +3,10 @@
   padding-bottom: 0px;
 }
 
+.titulo {
+    display: none;
+}
+
 .card-container {
   perspective: 1000px;
   margin: 10px;
