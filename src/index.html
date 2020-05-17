@@ -25,28 +25,31 @@
     </header>
     <main class="main">
         <h3 class="filtrar"> Filtrar por: </h3>
-        <section class="filtros">
-            <legend class="legend"> Tipo </legend>
-            <select id="types">
+        <div class="filtersbox">
+            <section class="filtros">
+                <legend class="legend"> Tipo </legend>
+                <select id="types" placeholder="Filtrar por tipo">
       </select>
-        </section>
-        <section class="filtros">
-            <legend class="legend"> Ovos </legend>
-            <select id="eggs">
+            </section>
+            <section class="filtros">
+                <legend class="legend"> Ovos </legend>
+                <select id="eggs">
       </select>
-        </section>
-        <section class="filtros">
-            <legend class="legend"> Ordenar por: </legend>
-            <select id="ordens">
+            </section>
+            <section class="filtros">
+                <legend class="legend"> Ordenar por: </legend>
+                <select id="ordens">
+        <option class="option"> Ordenar por</option>
         <option class="option" value="name|asc"> Alfabética A-Z</option>
         <option class="option" value="name|desc"> Alfabética Z-A</option>
-        <option class="option" value="num|asc" selected>Numérica Crescente</option>
+        <option class="option" value="num|asc">Numérica Crescente</option>
         <option class="option" value="num|desc"> Numérica Decrescente</option>
       </select>
-        </section>
-        <section class="filtros">
-            <input type="text" id="cpBusca" placeholder="Pesquisar" autocomplete="off">
-        </section>
+            </section>
+            <section class="filtros">
+                <input type="text" id="cpBusca" placeholder="Pesquisar por nome" autocomplete="off">
+            </section>
+        </div>
         <section id="porcentagem-de-tipo-de-pokemon" class="invisivel">
         </section>
         <section id="pokemonList" class="pokemonList">

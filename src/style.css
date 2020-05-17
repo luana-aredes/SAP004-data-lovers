@@ -260,4 +260,27 @@ footer {
     h3 {
         display: none;
     }
+    .legend {
+        display: none;
+    }
+    .filtros {
+        display: block;
+        padding: 3px;
+    }
+    select,
+    input {
+        width: 60%;
+        background-color: rgb(156, 200, 206);
+        font-size: 18px;
+    }
+    .filtersbox {
+        text-align: center;
+        margin: auto;
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 4px;
+    }
+    #porcentagem-de-tipo-de-pokemon {
+        width: auto;
+    }
 }
