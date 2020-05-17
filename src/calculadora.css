@@ -1,0 +1,21 @@
+.fieldset {
+  border: none;
+}
+
+form {
+  background-color: rgba(223, 221, 221, 0.5);
+  width: 600px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-family: cursive;
+  font-size: 20px;
+  background-image: url(imagens/fundoCalc.jpeg);
+}
+
+#sub-titulo {
+  font-size: 50px;
+}

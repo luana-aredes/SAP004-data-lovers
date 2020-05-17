@@ -2,58 +2,62 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Pokefã </title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Pokefã </title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <header>
-          <h1 class="titulo"> PokeFÃ </h1>
-            <nav class="nav">
-        <ul>
-          <li class="item"><a href="index.html"> Página Inicial </a></li>
-          <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
-          <li class="item"><a href="calculadora.html"> Calculadora </a></li>
-        </ul>
-      </nav>
-  </header>
-  <main>
-    <h3 class="filtrar"> Filtrar por: </h3>
-    <section class="filtros">
-      <legend class="legend"> Tipo </legend>
-      <select id="types">
+<body class="body">
+    <header>
+        <section class="barra">
+            <img src="imagens/menu.png" width="50px" height="50px" class="burguer" id="burguer">
+            <h1 class="titulo-mobile"> PokeFÃ </h1>
+        </section>
+        <h1 class="titulo"> PokeFÃ </h1>
+        <nav class="nav" id="nav">
+            <ul>
+                <li class="item"><a href="index.html"> Página Inicial </a></li>
+                <li class="item"><a href="dicas.html"> Dicas do Jogo </a></li>
+                <li class="item"><a href="calculadora.html"> Calculadora </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h3 class="filtrar"> Filtrar por: </h3>
+        <section class="filtros">
+            <legend class="legend"> Tipo </legend>
+            <select id="types">
       </select>
-    </section>
-    <section class="filtros">
-      <legend class="legend"> Ovos </legend>
-      <select id="eggs">
+        </section>
+        <section class="filtros">
+            <legend class="legend"> Ovos </legend>
+            <select id="eggs">
       </select>
-    </section>
-    <section class="filtros">
-      <legend class="legend"> Ordenar por: </legend>
-      <select id="ordens">
+        </section>
+        <section class="filtros">
+            <legend class="legend"> Ordenar por: </legend>
+            <select id="ordens">
         <option class="option" value="name|asc"> Alfabética A-Z</option>
         <option class="option" value="name|desc"> Alfabética Z-A</option>
         <option class="option" value="num|asc" selected>Numérica Crescente</option>
         <option class="option" value="num|desc"> Numérica Decrescente</option>
       </select>
-    </section>
-    <form action="" method="submit" class="pesquisa">
-      <input type="search" id="pesquisar" placeholder="Pesquisar" list="data.pokemonList">
-      <input type="image" src="imagens/lupa.png" class="btn" button="executar()">
-      <datalist id="historico">
-        <option value="pikachu"></option>
-      </datalist>
-    </form>
-    <section id="pokemonList">
-    </section>
-  </main>
-  <footer>
-    Copyright Lab- meninas
-  </footer>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
+        </section>
+        <section class="filtros">
+            <input type="text" id="cpBusca" placeholder="Pesquisar" autocomplete="off">
+        </section>
+        <section id="porcentagem-de-tipo-de-pokemon" class="invisivel">
+        </section>
+        <section id="pokemonList" class="pokemonList">
+        </section>
+    </main>
+    <footer>
+        Copyright Lab- meninas
+    </footer>
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+    <script src="menu.js" type="module"></script>
 </body>
+
 </html>
