@@ -40,18 +40,19 @@ function mostrarNaTela(pokemons) {
     <div class="card">
   <div class="front">
    <div class="imagem"><img src="${pokemon.img}"></div>
-     <div class="nome" class="numero">${pokemon.num}</div>
+     <div class="nome" class="numero">${pokemon.num} &nbsp;&nbsp;&nbsp;&nbsp;</div>
         <div class="nome">${pokemon.name}</div>
         <div class="tipo"><hr>${pokemon.type.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")}</div>
-        <div class="ovos"><hr><img src="imagens/ovo.png" class="imagem-ovo">${pokemon.egg}</div>
+        <div class="ovos"><hr><img src="imagens/ovo.png" class="imagem-ovo">&nbsp;&nbsp; ${pokemon.egg}</div>
+        <div class="quantidade-doce"><hr><img src="imagens/doce.png" class="imagem-card">&nbsp;&nbsp; ${pokemon.candy_count}</div>
+        
       </div>
       <div class="back">
       <div class="altura"> Altura: ${pokemon.height}</div>
       <div class="largura"> Largura: ${pokemon.weight}</div>
-      <div class="qauntidade-doce"><hr><img src="imagens/doce.png" class="imagem-doce"> ${pokemon.candy_count}</div>
-      <div class="chance-aparecer"><hr> Chance de Aparecer: ${pokemon.spawn_chance}</div>
-      <div class="tempo-desova"><hr> Tempo de Desova: ${pokemon.spawn_time}</div>
-      <div class="fraquezas"><hr> Fraquezas <br> ${pokemon.weaknesses.join("&nbsp;&nbsp;")}</div>
+      <div class="chance-aparecer"><hr> Chance de Aparecer <br> ${pokemon.spawn_chance}</div>
+      <div class="tempo-desova"><hr> Tempo de Desova <br> ${pokemon.spawn_time}</div>
+      <div class="fraquezas"><hr> Fraquezas <br> <p>${pokemon.weaknesses.join(" &nbsp;&nbsp; ")}</p></div>
     </div>
     </div>
     </div>
