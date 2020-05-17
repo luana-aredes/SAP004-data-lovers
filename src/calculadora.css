@@ -16,6 +16,6 @@ main {
   background-image: url(imagens/fundoCalc.jpeg);
 }
 
-#sub-titulo {
+.sub-titulo {
   font-size: 50px;
 }
