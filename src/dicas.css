@@ -1,5 +1,6 @@
 #sub-titulo {
   font-size: 50px;
+  padding-bottom: 0px;
 }
 
 .card-container {
@@ -27,38 +28,71 @@
 }
 
 .front {
-  background-color: rgba(223, 221, 221, 0.5);
+  background-color: rgba(223, 221, 221, 0.7);
   box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
   border-radius: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
 }
 
 .back {
-  background-color: rgba(223, 221, 221, 0.5);
+  background-color: rgba(223, 221, 221);
   box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
   border-radius: 10px;
   transform: rotateY(180deg);
   text-align: left;
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.back p {
+  padding: 40px;
+  text-align: justify;
+}
+
+.front h3 {
+  padding: 40px;
+  text-align: center;
 }
 
 #dicas .card-container {
   text-align: center;
   display: inline-block;
-  margin: 10px;
+  margin: 30px 50px 50px;
 }
 
 #dicas .card {
-  background-color: rgb(167, 163, 163, 0, 4);
-  width: 350px;
-  height: 500px;
+  width: 380px;
+  height: 450px;
   text-align: center;
   display: inline-block;
-  margin: 10px;
 }
 
-#pokebola {
+.titulo-card {
+  width: 380px;
+  height: 150px;
+  background-color: cadetblue;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.imagem-dicas {
   width: 200px;
-  height: 200px;
+  height: 180px;
+  bottom: -100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.pokebola {
+  width: 100px;
+  height: 100px;
+  bottom: -190px;
   position: relative;
   animation-name: example;
   animation-duration: 6s;
@@ -75,7 +109,7 @@
   }
 
   25% {
-    transform: scale(0.9, 1.1) translateY(-300px);
+    transform: scale(0.9, 1.1) translateY(-200px);
   }
 
   50% {
