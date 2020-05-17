@@ -2,6 +2,10 @@
     font-size: 50px;
 }
 
+.titulo {
+    display: none;
+}
+
 .card-container {
     perspective: 1000px;
     margin: 10px;

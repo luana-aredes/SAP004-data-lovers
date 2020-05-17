@@ -22,15 +22,11 @@
 
 .titulo,
 #sub-titulo {
-    font-size: 80px;
-    text-align: center;
+    font-size: 70px;
     font-family: pokemon;
     color: #ffcb08;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #385fab;
-    margin: 0;
-    padding: 40px 0px;
     text-shadow: 4px 0px 0px blue, 5px 0px 1px blue, -1px 1px 0px blue, 1px -2px 0px blue;
+    text-align: center;
 }
 
 @font-face {
@@ -39,7 +35,9 @@
 }
 
 .nav {
-    text-align: right;
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 1px;
+    margin: auto;
 }
 
 .item {
@@ -47,20 +45,24 @@
 }
 
 .item a {
-    border-radius: 5px;
-    box-shadow: 3px 3px rgba(10, 10, 10, 0.2);
-    background: rgb(255, 255, 255, 0.7);
     text-transform: uppercase;
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
-    margin: 8px;
-    padding: 6px;
+    padding: 8px;
 }
 
 .item a:hover {
     color: rgb(30, 40, 131);
+}
+
+.filtersbox {
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .filtros {
@@ -102,6 +104,10 @@
 
 .card-container:hover .card {
     transform: rotateY(180deg);
+}
+
+.pokemonList {
+    text-align: center;
 }
 
 #pokemonList .card-container {
