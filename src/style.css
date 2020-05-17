@@ -3,18 +3,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
 }
 
 .header {
   display: inline;
 }
 
-/*header {
-  position: fixed;
-}
-*/
 .main {
-  width: 980px;
   margin: auto;
 }
 
@@ -96,7 +92,6 @@
   transform-style: preserve-3d;
   transition: transform 0.8s;
   position: relative;
-
 }
 
 .card-container:hover .card {
@@ -167,7 +162,6 @@ hr {
   width: 160px;
   white-space: pre-wrap
 }
-
 
 footer {
   background-image: linear-gradient(to right, #639d25, #427768);
@@ -257,15 +251,54 @@ footer {
   }
 
   .nav ul {
-    margin: 0
+    margin: 0;
+    padding: 0;
   }
 
   .item a {
     font-size: 19px;
     display: block;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: turquoise;
+    color: rgb(0, 0, 0);
+    padding: 6px;
+  }
+
+  .pokemonList {
+    text-align: center;
   }
 
   h3 {
     display: none;
+  }
+
+  .legend {
+    display: none;
+  }
+
+  .filtros {
+    display: block;
+    padding: 3px;
+  }
+
+  select,
+  input {
+    width: 60%;
+    background-color: rgb(156, 200, 206);
+    font-size: 18px;
+  }
+
+  .filtersbox {
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 4px;
+  }
+
+  #porcentagem-de-tipo-de-pokemon {
+    width: auto;
   }
 }
