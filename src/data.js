@@ -15,7 +15,7 @@ export const filterByName = (data, orderByName, args) => data.filter((poke) => {
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function (a, b) {
     if (a[sortBy] > b[sortBy]) {
-      return 1;
+   return 1;
     }
     if (a[sortBy] < b[sortBy]) {
       return -1;
