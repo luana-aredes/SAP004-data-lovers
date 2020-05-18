@@ -329,13 +329,4 @@ footer {
   #porcentagem-de-tipo-de-pokemon {
     width: auto;
   }
-
-
-  @media(hover: hover) and (pointer: fine) {
-    .card-container:hover .card {
-      transform: rotateY(180deg);
-    }
-  }
-
-  /*testando girar o card no mobile*/
 }

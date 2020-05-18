@@ -16,7 +16,6 @@
 .card-container {
   perspective: 1000px;
   margin: 10px;
-
 }
 
 .card {
@@ -64,14 +63,14 @@
   text-align: justify;
 }
 
-.front h3 {
+.titulo-card p {
   padding: 40px;
   text-align: center;
+  font-weight: bold;
 }
 
 #dicas .card-container {
   text-align: center;
-  display: inline-block;
   margin: 30px 50px 50px;
 }
 
@@ -138,4 +137,27 @@
   100% {
     transform: scale(1, 1) translateY(0);
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+
+  #dicas .card {
+    width: 270px;
+    height: 480px;
+  }
+
+  .titulo-card {
+    width: 270px;
+    height: 150px;
+  }
+
+  .back p {
+    padding: 10px;
+  }
+
+  .titulo-card p {
+    padding: 30px;
+  }
+
 }
