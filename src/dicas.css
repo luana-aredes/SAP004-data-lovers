@@ -30,8 +30,7 @@
   transform: rotateY(180deg);
 }
 
-.front,
-.back {
+.front, .back {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -113,51 +112,39 @@
   0% {
     transform: scale(1, 1) translateY(0);
   }
-
   5% {
     transform: scale(1.1, 0.9) translateY(0);
   }
-
   25% {
     transform: scale(0.9, 1.1) translateY(-200px);
   }
-
   50% {
     transform: scale(1.1, 0.9) translateY(0);
   }
-
   60% {
     transform: scale(0.9, 1.1) translateY(-40px);
   }
-
   70% {
     transform: scale(1.1, 0.9) translateY(0);
   }
-
   100% {
     transform: scale(1, 1) translateY(0);
   }
 }
 
 @media only screen and (max-width: 600px) {
-
-
   #dicas .card {
     width: 270px;
     height: 480px;
   }
-
   .titulo-card {
     width: 270px;
     height: 150px;
   }
-
   .back p {
     padding: 10px;
   }
-
   .titulo-card p {
     padding: 30px;
   }
-
 }
