@@ -2,7 +2,7 @@
             background-image: url(imagens/fundo_paisagem.jpg);
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll;
             margin: 0;
         }
         
@@ -126,6 +126,10 @@
         
         .pokemonList {
             text-align: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-gap: 24px;
+            padding: 16px;
         }
         
         #pokemonList .card-container {
@@ -133,12 +137,9 @@
         }
         
         #pokemonList .card {
-            background-color: rgb(167, 163, 163, 0, 4);
-            width: 160px;
             height: 260px;
+            text-align: center;
             display: inline-block;
-            margin: 12px;
-            padding: 3px;
         }
         
         .front,
@@ -148,18 +149,20 @@
             height: 100%;
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
-            border-radius: 10px;
+            border-radius: 4px;
             background-color: rgba(223, 221, 221, 1);
         }
         
         .front {
             text-align: center;
-            box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
+            -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
         }
         
         .back {
             text-align: center;
-            box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
+            -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
             transform: rotateY(180deg);
             padding-top: 10px;
         }
@@ -183,8 +186,8 @@
         }
         
         .imagem {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
             background-color: cadetblue;
             background-size: 160px 120px;
         }
@@ -200,15 +203,6 @@
             color: beige;
             text-align: center;
             padding-top: 25px;
-        }
-        
-        #pokemonList .card {
-            background-color: rgb(167, 163, 163, 0, 4);
-            width: 160px;
-            height: 250px;
-            text-align: center;
-            display: inline-block;
-            margin-top: 50px;
         }
         
         #porcentagem-de-tipo-de-pokemon {
@@ -270,6 +264,7 @@
                 top: 13px;
                 /*Estava -25px, então mudei para 13px positivos*/
                 left: calc(50% - 56px);
+                line-height: .7;
             }
             .nav {
                 display: none;
@@ -305,7 +300,9 @@
             }
             select,
             input {
-                width: 60%;
+                width: 100%;
+                max-width: 260px;
+                margin-bottom: 8px;
                 background-color: rgb(156, 200, 206);
                 font-size: 18px;
             }
