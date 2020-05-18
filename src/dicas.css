@@ -1,15 +1,22 @@
 .sub-titulo {
-  font-size: 50px;
+  font-size: 45px;
   padding-bottom: 0px;
 }
 
+#dicas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .titulo {
-    display: none;
+  display: none;
 }
 
 .card-container {
   perspective: 1000px;
   margin: 10px;
+
 }
 
 .card {
