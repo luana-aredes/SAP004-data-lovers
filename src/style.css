@@ -4,6 +4,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             margin: 0;
+            font-family: 'Barlow Semi Condensed', sans-serif;
         }
         
         @font-face {
@@ -15,6 +16,7 @@
             background-color: rgb(255, 255, 255, 0.7);
             padding: 1px;
             margin: auto;
+            font-family: 'Barlow Semi Condensed', sans-serif;
         }
         
         .item {
@@ -44,15 +46,12 @@
         }
         
         .sub-titulo {
-            font-size: 80px;
-            text-align: center;
+            font-size: 67px;
             font-family: pokemon;
             color: #ffcb08;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: #385fab;
-            margin: 0;
-            padding: 40px 0px;
             text-shadow: 4px 0px 0px blue, 5px 0px 1px blue, -1px 1px 0px blue, 1px -2px 0px blue;
+            margin-top: 40px;
+            text-align: center;
         }
         
         .main {
@@ -77,6 +76,7 @@
             width: 100%;
             background-color: rgb(188, 229, 234);
             font-size: 18px;
+            font-family: 'Barlow Semi Condensed', sans-serif;
             padding: 4px;
             border-radius: 9px;
         }
