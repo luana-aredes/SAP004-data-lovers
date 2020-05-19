@@ -4,6 +4,7 @@
           background-repeat: no-repeat;
           background-attachment: fixed;
           margin: 0;
+          font-family: 'Barlow Semi Condensed', sans-serif;
         }
 
         @font-face {
@@ -35,7 +36,7 @@
         }
 
         .title {
-          font-size: 80px;
+          <<<<<<< HEAD font-size: 80px;
           font-family: pokemon;
           color: #ffcb08;
           text-shadow: 4px 0px 0px blue, 5px 0px 1px blue, -1px 1px 0px blue, 1px -2px 0px blue;
@@ -54,6 +55,7 @@
           padding: 40px 0px;
           text-shadow: 4px 0px 0px blue, 5px 0px 1px blue, -1px 1px 0px blue, 1px -2px 0px blue;
         }
+
 
         .main {
           margin: auto;
@@ -77,6 +79,7 @@
           width: 100%;
           background-color: rgb(188, 229, 234);
           font-size: 18px;
+          font-family: 'Barlow Semi Condensed', sans-serif;
           padding: 4px;
           border-radius: 9px;
         }
@@ -314,10 +317,6 @@
           }
 
           h3 {
-            display: none;
-          }
-
-          .legend {
             display: none;
           }
         }

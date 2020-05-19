@@ -1,13 +1,14 @@
 .body {
   background-image: url(imagens/fundoCalc.jpeg);
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .title {
   display: none;
 }
 
-.subtitle {
-  font-size: 50px;
+.sub-titulo {
+  font-size: 67px;
 }
 
 .main {
@@ -19,7 +20,7 @@
   background-color: rgba(223, 221, 221, 0.8);
   width: 50%;
   height: 100%;
-  font-family: cursive;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 20px;
   border-radius: 10px;
   box-shadow: 4px 4px rgba(10, 10, 10, 0.2);
@@ -84,5 +85,9 @@
     margin: auto 7%;
     background-color: rgb(188, 229, 234, 0.7);
     border-radius: 10px;
+  }
+
+  .sub-titulo {
+    font-size: 39px;
   }
 }
