@@ -126,10 +126,6 @@
         
         .pokemonList {
             text-align: center;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            grid-gap: 24px;
-            padding: 16px;
         }
         
         #pokemonList .card-container {
@@ -137,9 +133,13 @@
         }
         
         #pokemonList .card {
-            height: 260px;
+            background-color: rgb(167, 163, 163, 0, 4);
+            width: 160px;
+            height: 250px;
             text-align: center;
             display: inline-block;
+            margin-top: 50px;
+            margin: 10px;
         }
         
         .front,
