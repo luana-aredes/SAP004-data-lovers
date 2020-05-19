@@ -1,164 +1,167 @@
 .title {
-    display: none;
+  display: none;
 }
 
-.sub-titulo {
-    font-size: 67px;
-    font-family: pokemon;
-    color: #ffcb08;
-    text-shadow: 4px 0px 0px blue, 5px 0px 1px blue, -1px 1px 0px blue, 1px -2px 0px blue;
-    margin-top: 40px;
-    text-align: center;
+.subtitle {
+  font-size: 45px;
+  padding-bottom: 0px;
 }
 
-#dicas {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#tips-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-container {
-    perspective: 1000px;
-    margin: 10px;
+  perspective: 1000px;
+  margin: 10px;
 }
 
 .card {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  position: relative;
 }
 
 .card-container:hover .card {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.card-container:hover .card .imagem-dicas,
-.card-container:hover .card .pokebola {
-    display: none;
+.card-container:hover .card .tips-image,
+.card-container:hover .card .pokeball {
+  display: none;
 }
 
 .front,
 .back {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
 .front {
-    background-color: rgba(223, 221, 221, 0.7);
-    box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.6;
+  background-color: rgba(223, 221, 221, 0.7);
+  box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
 }
 
 .back {
-    background-color: rgba(223, 221, 221);
-    box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
-    border-radius: 10px;
-    transform: rotateY(180deg);
-    text-align: left;
-    display: flex;
-    align-items: center;
-    line-height: 1.6;
+  background-color: rgba(223, 221, 221);
+  box-shadow: 4px 4px rgba(10, 10, 10, 0.3);
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
 }
 
-#dicas .card {
-    width: 380px;
-    height: 450px;
-    text-align: center;
-    display: inline-block;
+#tips-card .card {
+  width: 380px;
+  height: 450px;
+  text-align: center;
+  display: inline-block;
 }
 
-.titulo-card {
-    width: 380px;
-    height: 150px;
-    background-color: cadetblue;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+.card-title {
+  width: 380px;
+  height: 150px;
+  background-color: cadetblue;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-.titulo-card-conteudo {
-    padding: 40px;
-    text-align: center;
-    font-weight: bold;
+.card-title-content {
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.texto-card {
-    padding: 40px;
-    text-align: justify;
+.text-card {
+  padding: 40px;
+  text-align: justify;
 }
 
-#dicas .card-container {
-    text-align: center;
-    margin: 30px 50px 50px;
+#tips-card .card-container {
+  text-align: center;
+  margin: 30px 50px 50px;
 }
 
-.imagem-dicas {
-    width: 200px;
-    height: 180px;
-    bottom: -100px;
-    position: relative;
-    animation-name: example;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
+.tips-image {
+  width: 200px;
+  height: 180px;
+  bottom: -100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 
-.pokebola {
-    width: 100px;
-    height: 100px;
-    bottom: -190px;
-    position: relative;
-    animation-name: example;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
+.pokeball {
+  width: 100px;
+  height: 100px;
+  bottom: -190px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes example {
-    0% {
-        transform: scale(1, 1) translateY(0);
-    }
-    5% {
-        transform: scale(1.1, 0.9) translateY(0);
-    }
-    25% {
-        transform: scale(0.9, 1.1) translateY(-200px);
-    }
-    50% {
-        transform: scale(1.1, 0.9) translateY(0);
-    }
-    60% {
-        transform: scale(0.9, 1.1) translateY(-40px);
-    }
-    70% {
-        transform: scale(1.1, 0.9) translateY(0);
-    }
-    100% {
-        transform: scale(1, 1) translateY(0);
-    }
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  5% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1) translateY(-200px);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+
+  60% {
+    transform: scale(0.9, 1.1) translateY(-40px);
+  }
+
+  70% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .sub-titulo {
-        font-size: 39px;
-    }
-    #dicas .card {
-        width: 270px;
-        height: 480px;
-    }
-    .titulo-card {
-        width: 270px;
-        height: 150px;
-    }
-    .titulo-card-conteudo {
-        padding: 30px;
-    }
-    .texto-card {
-        padding: 10px;
-    }
+  #tips-card .card {
+    width: 270px;
+    height: 480px;
+  }
+
+  .card-title {
+    width: 270px;
+    height: 150px;
+  }
+
+  .card-title-content {
+    padding: 30px;
+  }
+
+  .text-card {
+    padding: 10px;
+  }
+
+
 }
