@@ -220,15 +220,6 @@
         }
 
         @media only screen and (max-width: 600px) {
-          .button {
-            cursor: pointer;
-            display: block;
-            background-image: url("imagens/menu.png");
-            text-indent: -9999px;
-            width: 109px;
-            height: 41px;
-          }
-
           .barra {
             display: block;
             height: 60px;
@@ -281,16 +272,12 @@
             padding: 6px;
           }
 
-          .pokemonList {
+          .filtersbox {
             text-align: center;
-          }
-
-          h3 {
-            display: none;
-          }
-
-          .legend {
-            display: none;
+            margin: auto;
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 4px;
           }
 
           .filtros {
@@ -307,16 +294,29 @@
             font-size: 18px;
           }
 
-          .filtersbox {
-            text-align: center;
-            margin: auto;
-            font-size: 18px;
-            margin-top: 20px;
-            padding: 4px;
-          }
-
           #porcentagem-de-tipo-de-pokemon {
             width: auto;
             height: auto;
+          }
+
+          .button {
+            cursor: pointer;
+            display: block;
+            background-image: url("imagens/menu.png");
+            text-indent: -9999px;
+            width: 109px;
+            height: 41px;
+          }
+
+          .pokemonList {
+            text-align: center;
+          }
+
+          h3 {
+            display: none;
+          }
+
+          .legend {
+            display: none;
           }
         }
