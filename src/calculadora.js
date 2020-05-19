@@ -1,6 +1,6 @@
-let resultadoCalculadora = document.getElementById("resultado-calculadora");
-let buttonReset = document.getElementById("button-reset")
-let buttonCalcular = document.getElementById("button-calcular");
+const resultadoCalculadora = document.getElementById("resultado-calculadora");
+const buttonReset = document.getElementById("button-reset")
+const buttonCalcular = document.getElementById("button-calcular");
 document.getElementById("button-calcular").addEventListener("click", calculoDias);
 resultadoCalculadora.classList.add("invisivel");
 buttonReset.classList.add("invisivel");

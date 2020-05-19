@@ -60,17 +60,9 @@ function mostrarNaTela(pokemons) {
 
 mostrarNaTela(pokemons);
 
-function candies() {
-  let candy = pokemon.candy_count
-  let doce = document.getElementsById("quantidade-doce")
-  if (candy === "undefined") {
-    doce.classList.add("invisivel");
-  }
-}
-
-let pokemonType = document.getElementById("types");
-let pokemonEgg = document.getElementById("eggs");
-let imprimirPorcentagem = document.getElementById("porcentagem-de-tipo-de-pokemon");
+const pokemonType = document.getElementById("types");
+const pokemonEgg = document.getElementById("eggs");
+const imprimirPorcentagem = document.getElementById("porcentagem-de-tipo-de-pokemon");
 pokemonType.addEventListener("change", seletorDeTipo);
 pokemonEgg.addEventListener("change", seletorDeEgg);
 
@@ -97,14 +89,14 @@ function seletorDeEgg(event) {
   }
 }
 
-document.getElementById("ordens").addEventListener("change", (event) => {
+document.getElementById("order").addEventListener("change", (event) => {
   const ordem = event.target.value.split("|");
   const sortBy = ordem[0];
   const sortOrder = ordem[1];
   const resultado = sortData(pokemons, sortBy, sortOrder);
   mostrarNaTela(resultado);
 });
-const campoDeBusca = document.getElementById("cpBusca");
+const campoDeBusca = document.getElementById("search-field");
 campoDeBusca.addEventListener("input", searchName);
 
 function searchName() {
