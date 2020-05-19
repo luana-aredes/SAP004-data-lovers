@@ -1,38 +1,13 @@
-.titulo {
-  display: none;
-}
-
-.fieldset {
-  border: none;
-  padding: 10px;
-}
-
 .body {
   background-image: url(imagens/fundoCalc.jpeg);
 }
 
-.input {
-  font-size: 16px;
-  width: 200px;
-  height: 15px;
-  padding: 3px;
-  margin-left: 5px;
+.titulo {
+  display: none;
 }
 
-#button-calcular,
-#button-reset {
-  background-color: cadetblue;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 180px;
-  height: 40px;
-  margin: auto auto 10px 20px;
-}
-
-.message {
-  margin: auto 20px;
-  background-color: rgb(188, 229, 234, 0.7);
-  border-radius: 10px;
+.sub-titulo {
+  font-size: 50px;
 }
 
 .main {
@@ -51,6 +26,11 @@
   margin-bottom: 80px;
 }
 
+.fieldset {
+  border: none;
+  padding: 10px;
+}
+
 .titulo-calculadora {
   width: 100%;
   height: 30%;
@@ -67,8 +47,28 @@
   line-height: 1.3;
 }
 
-.sub-titulo {
-  font-size: 50px;
+.input {
+  font-size: 16px;
+  width: 200px;
+  height: 15px;
+  padding: 3px;
+  margin-left: 5px;
+}
+
+.message {
+  margin: auto 20px;
+  background-color: rgb(188, 229, 234, 0.7);
+  border-radius: 10px;
+}
+
+#button-calcular,
+#button-reset {
+  background-color: cadetblue;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 180px;
+  height: 40px;
+  margin: auto auto 10px 20px;
 }
 
 @media only screen and (max-width: 600px) {
