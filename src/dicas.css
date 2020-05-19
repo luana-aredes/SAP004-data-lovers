@@ -2,12 +2,12 @@
   display: none;
 }
 
-.sub-titulo {
+.subtitle {
   font-size: 45px;
   padding-bottom: 0px;
 }
 
-#dicas {
+#tips-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -30,8 +30,8 @@
   transform: rotateY(180deg);
 }
 
-.card-container:hover .card .imagem-dicas,
-.card-container:hover .card .pokebola {
+.card-container:hover .card .tips-image,
+.card-container:hover .card .pokeball {
   display: none;
 }
 
@@ -63,14 +63,14 @@
   line-height: 1.6;
 }
 
-#dicas .card {
+#tips-card .card {
   width: 380px;
   height: 450px;
   text-align: center;
   display: inline-block;
 }
 
-.titulo-card {
+.card-title {
   width: 380px;
   height: 150px;
   background-color: cadetblue;
@@ -78,23 +78,23 @@
   border-top-left-radius: 10px;
 }
 
-.titulo-card-conteudo {
+.card-title-content {
   padding: 40px;
   text-align: center;
   font-weight: bold;
 }
 
-.texto-card {
+.text-card {
   padding: 40px;
   text-align: justify;
 }
 
-#dicas .card-container {
+#tips-card .card-container {
   text-align: center;
   margin: 30px 50px 50px;
 }
 
-.imagem-dicas {
+.tips-image {
   width: 200px;
   height: 180px;
   bottom: -100px;
@@ -104,7 +104,7 @@
   animation-iteration-count: infinite;
 }
 
-.pokebola {
+.pokeball {
   width: 100px;
   height: 100px;
   bottom: -190px;
@@ -145,21 +145,21 @@
 }
 
 @media only screen and (max-width: 600px) {
-  #dicas .card {
+  #tips-card .card {
     width: 270px;
     height: 480px;
   }
 
-  .titulo-card {
+  .card-title {
     width: 270px;
     height: 150px;
   }
 
-  .titulo-card-conteudo {
+  .card-title-content {
     padding: 30px;
   }
 
-  .texto-card {
+  .text-card {
     padding: 10px;
   }
 
