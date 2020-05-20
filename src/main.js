@@ -1,16 +1,16 @@
 import {
   filterBy,
-  calculator,
+  percentageByType,
   filterByName,
   sortData
 } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
-const pokemons = data.pokemon;
+const arrayOfPokemon = data.pokemon;
 let types = [];
 let eggs = [];
 
-for (const pokemon of pokemons) {
+for (const pokemon of arrayOfPokemon) {
   for (const type of pokemon.type) {
     types.push(type);
   }
@@ -34,8 +34,8 @@ for (const egg of eggs) {
 document.getElementById("types").innerHTML = typesHtml;
 document.getElementById("eggs").innerHTML = eggsHtml;
 
-function mostrarNaTela(pokemons) {
-  document.getElementById("pokemon-list").innerHTML = pokemons.map((pokemon) => `
+function printOnScreen(arrayOfPokemon) {
+  document.getElementById("pokemon-list").innerHTML = arrayOfPokemon.map((pokemon) => `
   <div class="card-container">
     <div class="card">
   <div class="front">
@@ -58,49 +58,52 @@ function mostrarNaTela(pokemons) {
 `).join("")
 }
 
-mostrarNaTela(pokemons);
+printOnScreen(arrayOfPokemon);
 
 const pokemonType = document.getElementById("types");
 const pokemonEgg = document.getElementById("eggs");
-const imprimirPorcentagem = document.getElementById("percentage-by-type");
-pokemonType.addEventListener("change", seletorDeTipo);
-pokemonEgg.addEventListener("change", seletorDeEgg);
+const printPercentage = document.getElementById("percentage-by-type");
+pokemonType.addEventListener("change", typeSelector);
+pokemonEgg.addEventListener("change", eggSelector);
 
-function seletorDeTipo(event) {
+
+function typeSelector(event) {
   const typeSelecionado = event.target.value;
-  const resultType = filterBy(pokemons, "type", typeSelecionado);
-  const porcentagem = calculator(pokemons, resultType);
-  mostrarNaTela(resultType);
-  imprimirPorcentagem.innerHTML = ` A porcentagem de pokemons do tipo ${typeSelecionado} é de ${porcentagem} % em relação a todos os outros pokemons.`;
-  imprimirPorcentagem.classList.remove("invisible");
+  const resultTypeSelected = filterBy(arrayOfPokemon, "type", typeSelecionado);
+  const percentage = percentageByType(arrayOfPokemon, resultTypeSelected);
+  printOnScreen(resultTypeSelected);
+  printPercentage.innerHTML = ` A porcentagem de pokemons do tipo ${typeSelecionado} é de ${percentage} % em relação a todos os outros pokemons.`;
+  printPercentage.classList.remove("invisible");
   if (typeSelecionado == "Todos" || typeSelecionado == "Filtrar por tipo") {
-    mostrarNaTela(pokemons);
-    imprimirPorcentagem.classList.add("invisible");
+    printOnScreen(arrayOfPokemon);
+    printPercentage.classList.add("invisible");
   }
 }
 
-function seletorDeEgg(event) {
+function eggSelector(event) {
   const typeSelecionado = event.target.value;
-  const resultEgg = filterBy(pokemons, "egg", typeSelecionado);
-  imprimirPorcentagem.classList.add("invisible");
-  mostrarNaTela(resultEgg);
+  const resultEggSelected = filterBy(arrayOfPokemon, "egg", typeSelecionado);
+  printPercentage.classList.add("invisible");
+  printOnScreen(resultEggSelected);
   if (typeSelecionado == "Filtrar por ovos") {
-    mostrarNaTela(pokemons);
+    printOnScreen(arrayOfPokemon);
   }
 }
 
 document.getElementById("order").addEventListener("change", (event) => {
-  const ordem = event.target.value.split("|");
-  const sortBy = ordem[0];
-  const sortOrder = ordem[1];
-  const resultado = sortData(pokemons, sortBy, sortOrder);
-  mostrarNaTela(resultado);
+  const order = event.target.value.split("|");
+  const sortBy = order[0];
+  const sortOrder = order[1];
+  const resultOfTheSelectedOrder = sortData(arrayOfPokemon, sortBy, sortOrder);
+  printOnScreen(resultOfTheSelectedOrder);
 });
-const campoDeBusca = document.getElementById("search-field");
-campoDeBusca.addEventListener("input", searchName);
+
+
+const searchField = document.getElementById("search-field");
+searchField.addEventListener("input", searchName);
 
 function searchName() {
-  const nomeDigitado = campoDeBusca.value;
-  const resultBusca = filterByName(pokemons, "name", nomeDigitado);
-  mostrarNaTela(resultBusca);
+  const typedName = searchField.value;
+  const searchResult = filterByName(arrayOfPokemon, "name", typedName);
+  printOnScreen(searchResult);
 }
