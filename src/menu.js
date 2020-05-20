@@ -1,6 +1,6 @@
-const botao = document.getElementById("burguer").addEventListener("click", mostrarMenu)
+const button = document.getElementById("burguer").addEventListener("click", showMenu)
 
-function mostrarMenu() {
+function showMenu() {
   const nav = document.getElementById("nav")
   nav.classList.toggle("visible")
 }
