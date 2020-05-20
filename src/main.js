@@ -1,16 +1,16 @@
 import {
   filterBy,
-  calculator,
+  percentageByType,
   filterByName,
   sortData
 } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
-const pokemons = data.pokemon;
+const arrayOfPokemon = data.pokemon;
 let types = [];
 let eggs = [];
 
-for (const pokemon of pokemons) {
+for (const pokemon of arrayOfPokemon) {
   for (const type of pokemon.type) {
     types.push(type);
   }
@@ -18,94 +18,92 @@ for (const pokemon of pokemons) {
 }
 
 types = types.filter((type, index) => types.indexOf(type) === index)
-let typesHtml = '<option class="options"> Todos </option>'
+let typesHtml = '<option class="options"> Filtrar por tipo </option>'
+typesHtml += '<option class="options"> Todos </option>'
 
 for (const type of types) {
   typesHtml += '<option class="options" value="' + type + '">' + type + '</option>'
 }
 
 eggs = eggs.filter((egg, index) => eggs.indexOf(egg) === index);
+let eggsHtml = '<option class="options"> Filtrar por ovos </option>'
 
-let eggsHtml = '<option class="option-egg"></option>';
 for (const egg of eggs) {
   eggsHtml += '<option class="option-egg" value="' + egg + '">' + egg + '</option>'
 }
 document.getElementById("types").innerHTML = typesHtml;
 document.getElementById("eggs").innerHTML = eggsHtml;
 
-function mostrarNaTela(pokemons) {
-  document.getElementById("pokemonList").innerHTML = pokemons.map((pokemon) => `
+function printOnScreen(arrayOfPokemon) {
+  document.getElementById("pokemon-list").innerHTML = arrayOfPokemon.map((pokemon) => `
   <div class="card-container">
     <div class="card">
   <div class="front">
-   <div class="imagem"><img src="${pokemon.img}"></div>
-     <div class="nome" class="numero">${pokemon.num}</div>
-        <div class="nome">${pokemon.name}</div>
+   <div class="image"><img src="${pokemon.img}"></div>
+     <div class="name" class="numero">${pokemon.num} &nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="name">${pokemon.name}</div>
         <div class="tipo"><hr>${pokemon.type.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")}</div>
-        <div class="ovos"><hr><img src="imagens/ovo.png" class="imagem-ovo">${pokemon.egg}</div>
+        <div class="ovos"><hr><img src="imagens/ovo.png" class="egg-image">&nbsp;&nbsp; ${pokemon.egg}</div>
+        <div class="quantidade-doce" id="quantidade-doce"><hr><img src="imagens/doce.png" class="picture-card">&nbsp;&nbsp; ${pokemon.candy_count}</div>
       </div>
       <div class="back">
       <div class="altura"> Altura: ${pokemon.height}</div>
       <div class="largura"> Largura: ${pokemon.weight}</div>
-      <div class="qauntidade-doce"><hr><img src="imagens/doce.png" class="imagem-doce"> ${pokemon.candy_count}</div>
-      <div class="chance-aparecer"><hr> Chance de Aparecer: ${pokemon.spawn_chance}</div>
-      <div class="tempo-desova"><hr> Tempo de Desova: ${pokemon.spawn_time}</div>
-      <div class="fraquezas"><hr> Fraquezas <br> ${pokemon.weaknesses.join("&nbsp;&nbsp;")}</div>
+      <div class="chance-aparecer"><hr> Chance de Aparecer <br> ${pokemon.spawn_chance}</div>
+      <div class="tempo-desova"><hr> Tempo de Desova <br> ${pokemon.spawn_time}</div>
+      <div class="weaknesses"><hr> Fraquezas <br> <p>${pokemon.weaknesses.join(" &nbsp;&nbsp; ")}</p></div>
     </div>
     </div>
     </div>
 `).join("")
 }
 
-mostrarNaTela(pokemons);
+printOnScreen(arrayOfPokemon);
 
-let pokemonType = document.getElementById("types");
-let pokemonEgg = document.getElementById("eggs");
-let imprimirPorcentagem = document.getElementById(
-  "porcentagem-de-tipo-de-pokemon"
-);
-pokemonType.addEventListener("click", seletorDeTipo);
-pokemonEgg.addEventListener("click", seletorDeEgg);
+const pokemonType = document.getElementById("types");
+const pokemonEgg = document.getElementById("eggs");
+const printPercentage = document.getElementById("percentage-by-type");
+pokemonType.addEventListener("change", typeSelector);
+pokemonEgg.addEventListener("change", eggSelector);
 
-function seletorDeTipo() {
-  const tipoDePokemon1 = pokemonType.selectedIndex;
-  const tipoDePokemon2 = pokemonType.options;
-  const typeSelecionado = tipoDePokemon2[tipoDePokemon1].text;
-  const resultType = filterBy(pokemons, "type", typeSelecionado);
-  const porcentagem = calculator(pokemons, resultType);
-  mostrarNaTela(resultType);
-  imprimirPorcentagem.innerHTML = ` A porcentagem de pokemons do tipo ${typeSelecionado} é de ${porcentagem} % em relação a todos os outros pokemons.`;
-  imprimirPorcentagem.classList.remove("invisivel");
-  if (typeSelecionado == "Todos") {
-    mostrarNaTela(pokemons);
-    imprimirPorcentagem.classList.add("invisivel");
+
+function typeSelector(event) {
+  const typeSelecionado = event.target.value;
+  const resultTypeSelected = filterBy(arrayOfPokemon, "type", typeSelecionado);
+  const percentage = percentageByType(arrayOfPokemon, resultTypeSelected);
+  printOnScreen(resultTypeSelected);
+  printPercentage.innerHTML = ` A porcentagem de pokemons do tipo ${typeSelecionado} é de ${percentage} % em relação a todos os outros pokemons.`;
+  printPercentage.classList.remove("invisible");
+  if (typeSelecionado == "Todos" || typeSelecionado == "Filtrar por tipo") {
+    printOnScreen(arrayOfPokemon);
+    printPercentage.classList.add("invisible");
   }
 }
 
-function seletorDeEgg() {
-  const tipoDePokemon3 = pokemonEgg.selectedIndex;
-  const tipoDePokemon4 = pokemonEgg.options;
-  const typeSelecionado = tipoDePokemon4[tipoDePokemon3].text;
-  const resultEgg = filterBy(pokemons, "egg", typeSelecionado);
-  imprimirPorcentagem.classList.add("invisivel");
-  mostrarNaTela(resultEgg);
-  if (typeSelecionado == "") {
-    mostrarNaTela(pokemons);
+function eggSelector(event) {
+  const typeSelecionado = event.target.value;
+  const resultEggSelected = filterBy(arrayOfPokemon, "egg", typeSelecionado);
+  printPercentage.classList.add("invisible");
+  printOnScreen(resultEggSelected);
+  if (typeSelecionado == "Filtrar por ovos") {
+    printOnScreen(arrayOfPokemon);
   }
 }
 
-document.getElementById("ordens").addEventListener("change", (event) => {
-  const ordem = event.target.value.split("|");
-  const sortBy = ordem[0];
-  const sortOrder = ordem[1];
-  const resultado = sortData(pokemons, sortBy, sortOrder);
-  mostrarNaTela(resultado);
+document.getElementById("order").addEventListener("change", (event) => {
+  const order = event.target.value.split("|");
+  const sortBy = order[0];
+  const sortOrder = order[1];
+  const resultOfTheSelectedOrder = sortData(arrayOfPokemon, sortBy, sortOrder);
+  printOnScreen(resultOfTheSelectedOrder);
 });
-const campoDeBusca = document.getElementById("cpBusca");
-campoDeBusca.addEventListener("input", searchName);
+
+
+const searchField = document.getElementById("search-field");
+searchField.addEventListener("input", searchName);
 
 function searchName() {
-  const nomeDigitado = campoDeBusca.value;
-  const resultBusca = filterByName(pokemons, "name", nomeDigitado);
-  mostrarNaTela(resultBusca);
+  const typedName = searchField.value;
+  const searchResult = filterByName(arrayOfPokemon, "name", typedName);
+  printOnScreen(searchResult);
 }
