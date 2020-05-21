@@ -21,7 +21,7 @@ A partir da pesquisa de usuários, conseguimos identificar as necessidades e ten
 * História 6 "Calculadora de ovos" - Eu como usuario gostaria de calcular quantos metros terei que percorrer para chocar todos os ovos que tenho.
 
 
-#### Protótipo de baixa fidelidade
+## Protótipo de baixa fidelidade
 
 Criamos um protótipo de baixa fidelidade para desenhar o layout do site e então começarmos a desenvolvê-lo. Abaixo estão as imagens do nosso protótipo, tambem fizemos um prototipo utilizando o aplicativo Marvel, onde podemos visualizar como seria a navegação dentro desse protótipo, podendo ser acessado através desse [link.](https://marvelapp.com/4ff22g8)
 
@@ -50,11 +50,14 @@ Pagina Calculadora
 ![](/src/Prototipo/calculadora1.png)
 
 
-
-#### Testes de usabilidade
+## Testes de usabilidade
 
 Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usuários, que nos retornaram feedbacks muito importantes para a melhoria do projeto, várias sugestões foram implementadas, como por exemplo: deixar a fonte do site padronizada, deixar claro na calculadora que o usuário deve digitar apenas numeros, entre outras.
 
+## Interface 
+
+Após implementação das melhorias sugeridas pela pesquisa de usabilidade, a interface final ficou assim:
+![](/src/gif_data_lovers.gif)
 
 ## Instalação e Execução
 
