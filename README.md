@@ -58,6 +58,7 @@ Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usu�
 
 Após implementação das melhorias sugeridas pela pesquisa de usabilidade, a interface final ficou assim:
 ![](/src/gif_data_lovers.gif)
+
 ## Instalação e Execução
 
 Primeiro é preciso ter em sua máquina as seguintes aplicações:
