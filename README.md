@@ -57,7 +57,7 @@ Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usu�
 ## Interface 
 
 Após implementação das melhorias sugeridas pela pesquisa de usabilidade, a interface final ficou assim:
-![](/src/gif_data_lovers.gif)
+![](/src/imagens/gif_data_lovers.gif)
 
 ## Instalação e Execução
 
