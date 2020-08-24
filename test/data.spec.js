@@ -1,20 +1,11 @@
 import {
   sortData,
   filterBy,
-  calculator,
+  percentageByType,
   filterByName
-} from '../src/data.js';
+} from '../src/home/data.js';
 
 const pokemon = [{
-    "name": "Bulbasaur",
-    "id": 1,
-    "type": [
-      "Grass",
-      "Poison"
-    ],
-    "egg": "2 km",
-  },
-  {
     "name": "Charizard",
     "id": 6,
     "type": [
@@ -22,8 +13,7 @@ const pokemon = [{
       "Flying"
     ],
     "egg": "Not in Eggs",
-  },
-  {
+  }, {
     "name": "Oddish",
     "id": 43,
     "type": [
@@ -33,6 +23,16 @@ const pokemon = [{
     ],
     "egg": "5 km",
   },
+  {
+    "name": "Bulbasaur",
+    "id": 1,
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "egg": "2 km",
+  },
+
 ];
 
 const arrayTypeGrass = [{
@@ -212,10 +212,10 @@ describe("Testando a função filterBy", () => {
 
 describe("Testando a função calculator", () => {
   it("é uma função", () => {
-    expect(typeof calculator).toBe("function");
+    expect(typeof percentageByType).toBe("function");
   });
   it("Esta calculando a porcentagem do tipo de pokemon", () => {
-    expect(calculator(pokemon, arrayTypeGrass)).toEqual(
+    expect(percentageByType(pokemon, arrayTypeGrass)).toEqual(
       "66.67"
     );
   });

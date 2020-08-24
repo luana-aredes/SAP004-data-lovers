@@ -1,5 +1,5 @@
  .body {
-   background-image: url(imagens/fundo_paisagem.jpg);
+   background-image: url(../imagens/fundo_paisagem.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -9,7 +9,7 @@
 
  @font-face {
    font-family: pokemon;
-   src: url(font/pokemon.ttf);
+   src: url(../font/pokemon.ttf);
  }
 
  .nav {
@@ -207,7 +207,6 @@
    display: block !important
  }
 
-
  @media only screen and (max-width: 600px) {
    .menu-bar {
      display: block;
@@ -293,7 +292,7 @@
    .button {
      cursor: pointer;
      display: block;
-     background-image: url("imagens/menu.png");
+     background-image: url("../imagens/menu.png");
      text-indent: -9999px;
      width: 109px;
      height: 41px;
