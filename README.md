@@ -27,27 +27,27 @@ Criamos um protótipo de baixa fidelidade para desenhar o layout do site e entã
 
 Pagina Inicial
 
-![](/src/Prototipo/home.png)
+![](/Prototipo/home.png)
 
 Botão Filtrar por tipo
 
-![](/src/Prototipo/filtroTipos.png)
+![](/Prototipo/filtroTipos.png)
 
 Botão filtrar por ovos
 
-![](/src/Prototipo/filtroEggs.png)
+![](/Prototipo/filtroEggs.png)
 
 Botão Ordenar por
 
-![](/src/Prototipo/ordenar.png)
+![](/Prototipo/ordenar.png)
 
 Pagina Dicas do Jogo
 
-![](/src/Prototipo/dicas.png)
+![](/Prototipo/dicas.png)
 
 Pagina Calculadora
 
-![](/src/Prototipo/calculadora1.png)
+![](/Prototipo/calculadora1.png)
 
 
 ## Testes de usabilidade
