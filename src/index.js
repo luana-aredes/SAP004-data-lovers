@@ -14,13 +14,13 @@ const rout = async () => {
     <nav class="nav" id="nav">
       <ul>
         <li class="navigation-item">
-          <a href="/"> Página Inicial </a>
+          <a href="/#"> Página Inicial </a>
         </li>
         <li class="navigation-item">
-          <a href="./#tips"> Dicas do Jogo </a>
+          <a href="/#tips"> Dicas do Jogo </a>
         </li>
         <li class="navigation-item">
-          <a href="./#calculator"> Calculadora </a>
+          <a href="/#calculator"> Calculadora </a>
         </li>
       </ul>
     </nav>
@@ -35,7 +35,11 @@ const rout = async () => {
   const subtitle = main.querySelector(".subtitle");
   const title = main.querySelector(".title");
 
+
   switch (window.location.hash) {
+    case " ":
+      main.appendChild(await home());
+      break;
     case "#calculator":
       main.appendChild(await calculator());
       subtitle.innerHTML = `Calculadora`;
