@@ -1,5 +1,5 @@
 {
-  "name": "data-lovers-refatoracao",
+  "name": "data-lovers",
   "version": "1.0.0",
   "main": "src/index.html",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "test": "jest --verbose --coverage",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/",
-    "deploy": "gh-pages -d src/"
+    "deploy": "gh-pages -d src"
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -22,19 +22,5 @@
     "jest": "^24.9.0",
     "opener": "^1.5.1",
     "serve": "^11.0.0"
-  },
-  "description": "## 1. Resumo",
-  "directories": {
-    "test": "test"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luana-aredes/SAP004-data-lovers-refatoracao.git"
-  },
-  "author": "“luana_aredes” <“luanaredes@hotmail.com”>",
-  "bugs": {
-    "url": "https://github.com/luana-aredes/SAP004-data-lovers-refatoracao/issues"
-  },
-  "homepage": "https://github.com/luana-aredes/SAP004-data-lovers-refatoracao#readme"
+  }
 }
