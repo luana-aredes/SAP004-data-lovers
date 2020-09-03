@@ -8,7 +8,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Como começar com um Pikachu em Pokémon GO?</p>
           </div>
-          <img class="tips-image" src="../images/pikachu.png" />
+          <img class="tips-image" src="./images/pikachu.png" />
         </div>
         <div class="back-tips">
           <p class="text-card">
@@ -29,7 +29,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Como não errar o lançamento das Pokébolas</p>
           </div>
-          <img src="../images/pokebola.png" class="pokeball" alt="" />
+          <img src="./images/pokebola.png" class="pokeball" alt="" />
         </div>
         <div class="back-tips">
           <p class="text-card">
@@ -50,7 +50,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Utilize a sua casa para chocar ovos</p>
           </div>
-          <img src="../images/egg.png" class="pokeball" alt="" />
+          <img src="./images/egg.png" class="pokeball" alt="" />
         </div>
         <div class="back-tips">
           <p class="text-card">
@@ -72,7 +72,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Batalhe com seus amigos</p>
           </div>
-          <img src="../images/ash.png" class="tips-image" alt="">
+          <img src="./images/ash.png" class="tips-image" alt="">
         </div>
         <div class="back-tips">
           <p class="text-card">
@@ -94,7 +94,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Evoluções do Eevee em Pokémon Go</p>
           </div>
-          <img src="../images/eevee.png" class="tips-image" alt="">
+          <img src="./images/eevee.png" class="tips-image" alt="">
         </div>
         <div class="back-tips">
           <p class="text-card">
@@ -116,7 +116,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Como escolher as evoluções do Eevee em Pokémon Go</p>
           </div>
-          <img src="../images/glaceon.png" class="tips-image" alt="">
+          <img src="./images/glaceon.png" class="tips-image" alt="">
         </div>
         <div class="back-tips">
           <p class="text-card">
