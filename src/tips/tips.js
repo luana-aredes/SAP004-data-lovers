@@ -72,7 +72,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Batalhe com seus amigos</p>
           </div>
-          <img src="../images/Ash.png" class="tips-image" alt="">
+          <img src="../images/ash.png" class="tips-image" alt="">
         </div>
         <div class="back-tips">
           <p class="text-card">

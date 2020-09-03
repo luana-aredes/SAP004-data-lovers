@@ -7,7 +7,6 @@ import {
 import data from "../data/pokemon/pokemon.js"
 
 export default async () => {
-  console.log("home")
   const arrayOfPokemon = await data.pokemon;
   let types = [];
   let eggs = [];
@@ -81,7 +80,7 @@ export default async () => {
           <div class="name" class="number">${pokemon.num} &nbsp;&nbsp;&nbsp;&nbsp;</div>
           <div class="name">${pokemon.name}</div>
           <div class="type"><hr>${pokemon.type.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")}</div>
-          <div><hr><img src="../images/egg.png" class="egg-image">&nbsp;&nbsp; ${pokemon.egg}</div>
+          <div><hr><img src="../../images/egg.png" class="egg-image">&nbsp;&nbsp; ${pokemon.egg}</div>
           <div><hr><img src="../images/candy.png" class="picture-card">&nbsp;&nbsp; ${temDoces(pokemon)}</div>
         </div>
         <div class="back">

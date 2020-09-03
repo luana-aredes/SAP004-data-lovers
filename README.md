@@ -6,7 +6,7 @@ Pokefã é uma plataforma contendo informações dos 151 pokemons da região de 
 
  :pushpin: Clique [aqui](https://luana-aredes.github.io/SAP004-data-lovers/) para acessar a Pokefã.
 
-![](/src/images/gif_data_lovers.gif)
+![](/src/images/gifDataLovers.gif)
 
 ## 2. Usuários
 
