@@ -46,6 +46,9 @@ const rout = async () => {
       subtitle.innerHTML = `Dicas`
       title.classList.add("invisible");
       break;
+    case "":
+      main.appendChild(await home());
+      break;
     default:
       main.appendChild(await home());
   }
