@@ -14,7 +14,7 @@ const rout = async () => {
     <nav class="nav" id="nav">
       <ul>
         <li class="navigation-item">
-          <a href="/"> Página Inicial </a>
+          <a href=""> Página Inicial </a>
         </li>
         <li class="navigation-item">
           <a href="./#tips"> Dicas do Jogo </a>
@@ -45,9 +45,6 @@ const rout = async () => {
       main.appendChild(await tips());
       subtitle.innerHTML = `Dicas`
       title.classList.add("invisible");
-      break;
-    case "":
-      main.appendChild(await home());
       break;
     default:
       main.appendChild(await home());
