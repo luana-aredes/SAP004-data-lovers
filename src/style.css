@@ -1,5 +1,5 @@
  .body {
-   background-image: url(../imagens/fundo_paisagem.jpg);
+   background-image: url(./images/fundo_paisagem.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -9,7 +9,7 @@
 
  @font-face {
    font-family: pokemon;
-   src: url(../font/pokemon.ttf);
+   src: url(./font/pokemon.ttf);
  }
 
  .nav {
@@ -54,10 +54,6 @@
    text-align: center;
    font-size: 67px;
    padding-bottom: 0px;
- }
-
- .main {
-   margin: auto;
  }
 
  .filtersbox {
@@ -106,7 +102,7 @@
  }
 
  .card-container {
-   perspective: 500px;
+   perspective: 1000px;
  }
 
  .card {
@@ -191,12 +187,15 @@
    white-space: pre-wrap
  }
 
- footer {
+ .footer {
    background-image: linear-gradient(to right, #639d25, #427768);
    height: 100px;
    color: beige;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
    text-align: center;
-   padding-top: 25px;
  }
 
  .invisible {
@@ -292,7 +291,7 @@
    .button {
      cursor: pointer;
      display: block;
-     background-image: url("../imagens/menu.png");
+     background-image: url("./images/menu.png");
      text-indent: -9999px;
      width: 109px;
      height: 41px;

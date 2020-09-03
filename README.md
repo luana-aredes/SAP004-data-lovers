@@ -1,17 +1,20 @@
 # PokeFã
 
+## 1. Resumo
+
 Pokefã é uma plataforma contendo informações dos 151 pokemons da região de Kanto, onde o usuário poderá visualizar todos os pokemons na tela, buscar o Pokémon por nome, filtrar sua busca por tipo e por ovos e ordenar os pokemons por ordem alfabética ou numérica. Essa plataforma tambem fornece ao usuário as estatísticas sobre cada tipo de pokémon, além de uma calculadora que calcula quantos metros deverá ser percorridos para chocar todos os ovos! oferecendo ao usuário informações relevantes para utilizar no jogo Pokemon Go.
-[Clique aqui para acessar.](https://luana-aredes.github.io/SAP004-data-lovers/)
 
+ :pushpin: Clique [aqui](https://luana-aredes.github.io/SAP004-data-lovers/) para acessar a Pokefã.
 
-## Usuário
+![](/src/images/gif_data_lovers.gif)
+
+## 2. Usuários
 
 O Projeto foi pensado e desenvolvido para todos os jogadores de Pokemon Go e fãs de Pokemon. Pensando nisso desenvolvemos um site responsivo, o qual é possível ser acessado por vários tipos de dispositivos, como computador, celular, tablet, etc.
 
-### Pesquisa de usuário
-A partir da pesquisa de usuários, conseguimos identificar as necessidades e tentamos atende-las da melhor forma possível, elaborando as Histórias de Usuário abaixo.
+### 2.1 Histórias do Usuário
 
-### Histórias de usuário
+A partir da pesquisa de usuários, conseguimos identificar as necessidades e tentamos atende-las da melhor forma possível, elaborando as Histórias de Usuário abaixo:
 
 * Historia 1 "Mostrar os dados na tela" - Eu como usuário gostaria de ver todos os cards de pokemons na tela para melhor visualização.
 * História 2 "Filtrar" - Eu como usuario gostaria de filtrar os pokemons que serão exibidos, para que apareçam na tela somente os que estiverem dentro do filtro escolhido.
@@ -20,46 +23,27 @@ A partir da pesquisa de usuários, conseguimos identificar as necessidades e ten
 * História 5 "Estatísticas" - Eu como usuario gostaria de ver as estatísticas do tipo de pokemon escolhido, para saber se são muitos ou poucos que se incluem naquele tipo.
 * História 6 "Calculadora de ovos" - Eu como usuario gostaria de calcular quantos metros terei que percorrer para chocar todos os ovos que tenho.
 
+## 3. Funcionalidades
 
-## Protótipo de baixa fidelidade
+O usuário poderá visualizar todos os Pokemons na tela, filtrar somente os pokemons por tipo e or quantidade de ovos, escolher se quer vê-los em ordem alfabética, pequisar os Pokemons por nome, ver as estatisticas de Pokemons do mesmo tipo e fazer o cálculo quantos metros terá que percorrer para chocar todos os ovos que tem.
+
+## 4. Protótipação
 
 Criamos um protótipo de baixa fidelidade para desenhar o layout do site e então começarmos a desenvolvê-lo. Abaixo estão as imagens do nosso protótipo, tambem fizemos um prototipo utilizando o aplicativo Marvel, onde podemos visualizar como seria a navegação dentro desse protótipo, podendo ser acessado através desse [link.](https://marvelapp.com/4ff22g8)
 
-Pagina Inicial
-
-![](/Prototipo/home.png)
-
-Botão Filtrar por tipo
-
-![](/Prototipo/filtroTipos.png)
-
-Botão filtrar por ovos
-
-![](/Prototipo/filtroEggs.png)
-
-Botão Ordenar por
-
-![](/Prototipo/ordenar.png)
-
-Pagina Dicas do Jogo
-
-![](/Prototipo/dicas.png)
-
-Pagina Calculadora
-
-![](/Prototipo/calculadora1.png)
+ <img src="/Prototipo/home.png" alt="" width="240px" height="350px"> <img src="/Prototipo/filtroTipos.png" alt="" width="240px" height="350px"> <img src="/Prototipo/filtroEggs.png" alt="" width="240px" height="350px"> <img src="/Prototipo/ordenar.png" alt="" width="240px" height="350px">
+ <img src="/Prototipo/dicas.png" alt="" width="240px" height="350px"> <img src="/Prototipo/calculadora1.png" alt="" width="240px" height="350px">
 
 
-## Testes de usabilidade
+## 5. Testes de usabilidade
 
 Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usuários, que nos retornaram feedbacks muito importantes para a melhoria do projeto, várias sugestões foram implementadas, como por exemplo: deixar a fonte do site padronizada, deixar claro na calculadora que o usuário deve digitar apenas numeros, entre outras.
 
-## Interface 
+## 6. Ferramentas e linguagens utilizadas
 
-Após implementação das melhorias sugeridas pela pesquisa de usabilidade, a interface final ficou assim:
-![](/src/gif_data_lovers.gif)
+HTML5, CSS3, Vanilla JavaScript, Jest , Node.js, Npm, VS Code e GitHub.
 
-## Instalação e Execução
+## 7. Instalação e Execução
 
 Primeiro é preciso ter em sua máquina as seguintes aplicações:
 
@@ -75,18 +59,18 @@ Com essas aplicações instaladas em seu computador, você poderá seguir as ins
 * Usar o comando npm start para executar o projeto e entre na url http://localhost:5000 no seu navegador.
 * Usar o comando npm run deploy para fazer o deploy no gitHub pages.
 
-## Considerações técnicas
+## 8. Autoras
 
-Ferramentas utilizadas no projeto:
+Desenvolvido por [Karine](https://github.com/kfsardela), [Luana](https://github.com/luana-aredes) e [Pamela](https://github.com/pamelagoncalves) e refatorado por Luana.
 
-* HTML, CSS, Vanilla JavaScript, Jest , Node.js, Npm, VS Code, Git e GitHub.
+Projeto desenvolvido para fins de aprendizado no Bootcamp da [Laboratória Brasil](https://www.laboratoria.la/br). 
 
-## Conhecimentos Adquiridos
+## 9. Considerações finais
 
-UX Design (Experiência do usuário):
-Pesquisa com usuarios / entrevistas
-Princípios de design/UI
+Durante a elaboração do projeto aprendemos muito. Aqui estão alguns dos conhecimentos Adquiridos:
 
+*UX Design (Experiência do usuário): pesquisa com usuarios / entrevistas
+* Princípios de design/UI
 * Organização e planejamento em equipe.
 * Princípios de UX e UI design
 * Prototipagem e pesquisa com usuários
@@ -101,15 +85,6 @@ Princípios de design/UI
 * Trabalhar com branchs, fazer pull request, merge e resolver conflitos no Git e GitHub.
 * Manter o repositório remoto sempre atualizado (commit, pull, push), utilizando o terminal.
 * Subir o seu projeto para o Github Pages, fazendo deploy.
-
-
-## Autoras
-
-[Karine](https://github.com/kfsardela), [Luana](https://github.com/luana-aredes) e [Pamela](https://github.com/pamelagoncalves).
-
-Projeto desenvolvido para fins de aprendizado no Bootcamp da [Laboratória Brasil](https://www.laboratoria.la/br). 
-
-
 
 
 
