@@ -8,7 +8,7 @@ export default () => {
           <div class="card-title">
             <p class="card-title-content">Como começar com um Pikachu em Pokémon GO?</p>
           </div>
-          <img class="tips-image" src="../images/picachu.jpg" />
+          <img class="tips-image" src="../images/pikachu.png" />
         </div>
         <div class="back-tips">
           <p class="text-card">
