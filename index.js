@@ -14,7 +14,7 @@ const rout = async () => {
     <nav class="nav" id="nav">
       <ul>
         <li class="navigation-item">
-          <a href="./#"> Página Inicial </a>
+          <a href="/"> Página Inicial </a>
         </li>
         <li class="navigation-item">
           <a href="./#tips"> Dicas do Jogo </a>
