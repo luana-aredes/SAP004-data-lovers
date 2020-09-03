@@ -37,7 +37,7 @@ const rout = async () => {
 
 
   switch (window.location.hash) {
-    case " ":
+    case "#":
       main.appendChild(await home());
       break;
     case "#calculator":
